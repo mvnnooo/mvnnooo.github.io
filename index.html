@@ -85,11 +85,9 @@
             gap: 1rem;
         }
 
-        /* تم تعديل CSS للشعار ليكون صورة */
         .header-logo {
-            height: 40px; /* يمكنك تعديل الارتفاع ليناسب لوجوك */
-            width: auto;  /* للحفاظ على التناسب */
-            filter: brightness(0) invert(1); /* يجعل اللوجو الأبيض أبيضًا على الخلفية الداكنة. احذف هذا السطر إذا كان لوجوك ملونًا */
+            height: 40px;
+            width: auto;
         }
 
         .nav-links {
@@ -257,12 +255,16 @@
             flex-wrap: wrap;
         }
 
-        /* تم تعديل CSS لاسم الفنان ليظهر الصورة بدلاً من النص */
-        .artist-name-logo {
-            height: 120px; /* يمكنك تعديل الارتفاع ليناسب حجم لوجوك */
-            width: auto;
-            max-width: 500px; /* حد أقصى للعرض */
-            object-fit: contain; /* للحفاظ على تناسب الصورة */
+        .artist-name {
+            font-size: 5.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--spotify-light), var(--spotify-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+            line-height: 1;
+            text-shadow: 0 0 20px rgba(29, 180, 84, 0.3);
         }
 
         .official-badge {
@@ -679,6 +681,76 @@
             font-size: 0.9rem;
         }
 
+        /* About Section Styles - New */
+        .about-section {
+            background: var(--spotify-card);
+            border-radius: 15px;
+            padding: 3rem;
+            margin-top: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(204, 204, 204, 0.95);
+        }
+
+        .about-text h3 {
+            color: var(--spotify-green);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .about-text strong {
+            color: var(--spotify-light);
+            font-weight: 700;
+        }
+
+        .artist-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .showcase-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(0.3) contrast(1.1);
+            transition: filter 0.3s ease;
+        }
+
+        .showcase-item:hover img {
+            filter: grayscale(0) contrast(1.2);
+        }
+
         footer {
             background: var(--spotify-sidebar);
             border-top: 1px solid var(--spotify-dark-gray);
@@ -737,17 +809,21 @@
         }
 
         @media (max-width: 1024px) {
-            .artist-name-logo {
-                height: 100px;
+            .artist-name {
+                font-size: 4rem;
             }
             .hero-content {
                 padding-left: 2rem;
             }
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         @media (max-width: 768px) {
-            .artist-name-logo {
-                height: 80px;
+            .artist-name {
+                font-size: 3rem;
             }
             .artist-badge {
                 width: 150px;
@@ -775,11 +851,14 @@
             section {
                 padding: 2rem 1rem;
             }
+            .about-section {
+                padding: 2rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .artist-name-logo {
-                height: 60px;
+            .artist-name {
+                font-size: 2.5rem;
             }
             .official-badge {
                 font-size: 0.8rem;
@@ -832,8 +911,7 @@
     <header>
         <nav>
             <div class="logo-container">
-                <!-- تم تغيير الشعار هنا إلى صورة -->
-                <!-- TODO: استبدل الرابط التالي برابط لوجو الخاص بك -->
+                <!-- استبدل الرابط التالي برابط لوجو الخاص بك -->
                 <img src="https://www2.0zz0.com/2025/12/24/11/440314758.png" alt="MVNNOOO Logo" class="header-logo">
             </div>
             <ul class="nav-links">
@@ -858,16 +936,12 @@
                 <div class="artist-info">
                     <div class="artist-type">فنان</div>
                     <div class="artist-name-container">
-                        <!-- تم تغيير اسم الفنان هنا إلى صورة اللوجو -->
-                        <!-- TODO: استبدل الرابط التالي برابط لوجو الخاص بك -->
-                        <img src="https://www2.0zz0.com/2025/12/24/11/440314758.png" alt="MVNNOOO" class="artist-name-logo">
+                        <!-- تم إرجاع اسم الفنان كما كان سابقًا -->
+                        <h1 class="artist-name">MVNNOOO</h1>
                         <span class="official-badge">رسمي موثق</span>
                     </div>
                     <div class="artist-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-user-friends"></i>
-                            <span>١٠٠٠٠+ مستمع شهريًا</span>
-                        </div>
+                        <!-- تم حذف "١٠٠٠٠+ مستمع شهريًا" -->
                         <div class="stat-item">
                             <i class="fas fa-music"></i>
                             <span>٢٠+ أغنية</span>
@@ -875,6 +949,10 @@
                         <div class="stat-item">
                             <i class="fas fa-globe-africa"></i>
                             <span>الإسكندرية، مصر</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>نشط منذ ٢٠٢٠</span>
                         </div>
                     </div>
                     <div class="hero-actions">
@@ -971,6 +1049,51 @@
                 </div>
                 <div class="album-title">رفرش</div>
                 <div class="album-year">٢٠٢٣ • أغنية منفردة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم About (عن الفنان) - تمت إضافته -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">عن الفنان</h2>
+        </div>
+        <div class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>البداية</h3>
+                    <p>وُلد MVNNOOO في العجمي، الإسكندرية عام 1992. نشأ في شوارع الإسكندرية النابضة بالحياة، حيث تعرض للطاقة الخام للحياة الحضرية، والتي أصبحت فيما بعد تأثيراً رئيسياً على موسيقاه.</p>
+
+                    <h3>المسيرة الموسيقية</h3>
+                    <p>بدأ MVNNOOO رحلته الموسيقية في عام 2020، مصنعاً أسلوباً مميزاً يدمج التراب المصري والدريل والأصوات الإلكترونية للشارع. تتميز موسيقاه بالإيقاعات الثقيلة، والسرد الواقعي، والطاقة المستوحاة من الشارع.</p>
+
+                    <h3>الرؤية الفنية</h3>
+                    <p>يحافظ MVNNOOO على ارتباط قوي بالإسكندرية، وغالباً ما يعكس ثقافة المدينة وحياة الشارع في كلماته. تركز رؤيته الفنية على الأصالة والطموح وترجمة تجارب الحياة الحضرية الحقيقية إلى موسيقاه.</p>
+                </div>
+
+                <div class="about-text">
+                    <h3>الأسلوب الموسيقي</h3>
+                    <p><strong>Egyptian Trap</strong> مع جودة إنتاج عالمية</p>
+                    <p><strong>Drill</strong> ممزوج بسرديات الشارع</p>
+                    <p><strong>Electronic Street Sound</strong> يلتقط مشهد الإسكندرية الأندرجراوند</p>
+                    <p><strong>Dark Minimal</strong> جماليات بإنتاج ثقيل وجوي</p>
+                    <p><strong>Sharp Storytelling</strong> متجذر في تجارب أصيلة</p>
+
+                    <h3>التعاونات</h3>
+                    <p>تعاون MVNNOOO مع فنانين آخرين بما في ذلك <strong>HARLY</strong>، ويواصل دفع حدود المشهد الموسيقي الحضري المصري.</p>
+                </div>
+            </div>
+
+            <div class="artist-showcase">
+                <div class="showcase-item">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="استوديو التسجيل">
+                </div>
+                <div class="showcase-item">
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="العروض الحية">
+                </div>
+                <div class="showcase-item">
+                    <img src="https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="عملية الإنتاج">
+                </div>
             </div>
         </div>
     </section>
@@ -1143,7 +1266,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.album-card, .stat-box, .platform-card').forEach(el => {
+        document.querySelectorAll('.album-card, .stat-box, .platform-card, .showcase-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'all 0.6s ease';
