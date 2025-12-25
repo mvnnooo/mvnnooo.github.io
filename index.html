@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>MVNNOOO - Official Website | Egyptian Trap & Drill Artist</title>
     <meta name="description" content="MVNNOOO - Alexandria-born artist shaping Egyptian Trap, Drill & Electronic Street Sound since 2020">
     <style>
@@ -32,6 +32,8 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            width: 100%;
+            min-height: 100vh;
         }
 
         .spotify-bg {
@@ -58,6 +60,7 @@
             opacity: 0.03;
         }
 
+        /* تحسين الهيدر للشاشات الصغيرة */
         header {
             position: fixed;
             top: 0;
@@ -65,34 +68,40 @@
             z-index: 1000;
             background: rgba(25, 20, 20, 0.95);
             backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             border-bottom: 1px solid rgba(83, 83, 83, 0.3);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
             padding: 0.8rem 0;
+            min-height: 70px;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 0 1rem;
             max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.5rem;
+            z-index: 1001;
         }
 
         .header-logo {
             height: 40px;
             width: auto;
+            max-height: 40px;
         }
 
+        /* قائمة التنقل للجوال */
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 1.5rem;
             list-style: none;
         }
 
@@ -128,14 +137,30 @@
             border-radius: 1px;
         }
 
+        /* زر القائمة للجوال */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--spotify-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        /* تحسين قسم البطل (Hero) */
         .hero {
             height: 100vh;
+            max-height: 900px;
+            min-height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
             background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            padding-top: 70px;
         }
 
         .hero-gradient {
@@ -160,6 +185,7 @@
             background-image: url('https://www2.0zz0.com/2025/12/24/10/193758201.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             filter: brightness(0.4) contrast(1.1) saturate(1.2) blur(0px);
             z-index: -1;
             transform: scale(1.1);
@@ -173,18 +199,18 @@
 
         .hero-content {
             z-index: 2;
-            padding: 2rem;
+            padding: 1.5rem;
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding-left: 4rem;
+            padding-left: 2rem;
         }
 
         .artist-header {
             display: flex;
             align-items: flex-end;
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
         }
 
@@ -256,7 +282,7 @@
         }
 
         .artist-name {
-            font-size: 5.5rem;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
             font-weight: 900;
             background: linear-gradient(90deg, var(--spotify-light), var(--spotify-green));
             -webkit-background-clip: text;
@@ -265,6 +291,7 @@
             letter-spacing: -2px;
             line-height: 1;
             text-shadow: 0 0 20px rgba(29, 180, 84, 0.3);
+            word-break: break-word;
         }
 
         .official-badge {
@@ -295,6 +322,7 @@
             margin-top: 1.5rem;
             color: var(--spotify-gray);
             font-size: 0.9rem;
+            flex-wrap: wrap;
         }
 
         .stat-item {
@@ -329,6 +357,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(29, 180, 84, 0.4);
+            flex-shrink: 0;
         }
 
         .play-button:hover {
@@ -354,6 +383,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9rem;
+            white-space: nowrap;
         }
 
         .follow-button:hover {
@@ -408,9 +438,10 @@
         }
 
         section {
-            padding: 3rem 2rem;
+            padding: 3rem 1.5rem;
             max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .section-header {
@@ -418,6 +449,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .section-title {
@@ -434,6 +467,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
         .see-all:hover {
@@ -651,7 +685,7 @@
         .about-section {
             background: var(--spotify-card);
             border-radius: 15px;
-            padding: 3rem;
+            padding: 2rem;
             margin-top: 3rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -659,7 +693,7 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 2rem;
             align-items: start;
         }
 
@@ -720,7 +754,7 @@
         footer {
             background: var(--spotify-sidebar);
             border-top: 1px solid var(--spotify-dark-gray);
-            padding: 3rem 2rem 2rem;
+            padding: 3rem 1.5rem 2rem;
             margin-top: 4rem;
         }
 
@@ -774,57 +808,146 @@
             text-decoration: none;
         }
 
+        /* استعلامات الوسائط المحسنة */
+        
+        /* لأجهزة اللابتوب والصغيرة */
+        @media (max-width: 1200px) {
+            .hero-content {
+                padding-left: 1.5rem;
+            }
+        }
+
+        /* لأجهزة التابلت */
         @media (max-width: 1024px) {
             .artist-name {
-                font-size: 4rem;
+                font-size: clamp(2.5rem, 6vw, 4rem);
             }
             .hero-content {
-                padding-left: 2rem;
+                padding-left: 1rem;
             }
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+            .nav-links {
+                gap: 1rem;
+            }
         }
 
+        /* لأجهزة التابلت الصغيرة والموبايل الكبيرة */
+        @media (max-width: 900px) {
+            .artist-badge {
+                width: 180px;
+                height: 180px;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .action-buttons {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+            .artist-header {
+                gap: 1.5rem;
+            }
+        }
+
+        /* لأجهزة الموبايل */
         @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: 0;
+                width: 100%;
+                background: rgba(25, 20, 20, 0.98);
+                backdrop-filter: blur(20px) saturate(180%);
+                -webkit-backdrop-filter: blur(20px) saturate(180%);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                border-top: 1px solid rgba(83, 83, 83, 0.3);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                transform: translateX(0);
+            }
+            
+            .nav-links a {
+                font-size: 1.1rem;
+                padding: 0.8rem 0;
+                text-align: center;
+                display: block;
+                border-bottom: 1px solid rgba(83, 83, 83, 0.2);
+            }
+            
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            
             .artist-name {
-                font-size: 3rem;
+                font-size: clamp(2rem, 7vw, 3rem);
             }
             .artist-badge {
                 width: 150px;
                 height: 150px;
             }
-            .nav-links {
-                display: none;
-            }
             .hero-content {
                 padding: 1rem;
+                padding-top: 0;
             }
             .artist-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1.5rem;
             }
-            .hero-actions {
+            .section-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            .action-buttons {
-                margin-left: 0;
-                margin-top: 1rem;
+            .see-all {
+                align-self: flex-end;
             }
             section {
                 padding: 2rem 1rem;
             }
             .about-section {
-                padding: 2rem;
+                padding: 1.5rem;
+                margin-top: 2rem;
+            }
+            .artist-info {
+                min-width: 100%;
+            }
+            .artist-stats {
+                gap: 1.5rem;
+            }
+            .hero {
+                padding-top: 70px;
+                min-height: 700px;
+                height: auto;
+            }
+            .hero-bg {
+                animation: mobilePan 40s infinite alternate ease-in-out;
+            }
+            @keyframes mobilePan {
+                0% { transform: scale(1.1) translateX(0) rotate(0deg); }
+                100% { transform: scale(1.2) translateX(10px) rotate(0.1deg); }
             }
         }
 
+        /* لأجهزة الموبايل الصغيرة */
         @media (max-width: 480px) {
             .artist-name {
-                font-size: 2.5rem;
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
             }
             .official-badge {
                 font-size: 0.8rem;
@@ -836,10 +959,69 @@
             .albums-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .stats-container, .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-text h3 {
+                font-size: 1.5rem;
+            }
+            .about-text {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .artist-showcase {
+                grid-template-columns: 1fr;
+            }
+            .showcase-item {
+                height: 180px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .play-button {
+                width: 50px;
+                height: 50px;
+            }
+            .play-button i {
+                font-size: 1.5rem;
+            }
+            .follow-button {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.85rem;
+            }
+            .genre-tag {
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+            }
+            .hero {
+                min-height: 650px;
+            }
         }
 
+        /* لأجهزة الموبايل الصغيرة جداً */
+        @media (max-width: 360px) {
+            .albums-grid {
+                grid-template-columns: 1fr;
+            }
+            .artist-badge {
+                width: 130px;
+                height: 130px;
+            }
+            .artist-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero-actions {
+                gap: 0.8rem;
+            }
+        }
+
+        /* لضمان ظهور شريط التمرير بشكل مناسب */
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 10px;
         }
 
         ::-webkit-scrollbar-track {
@@ -867,6 +1049,11 @@
             <div class="logo-container">
                 <img src="https://www2.0zz0.com/2025/12/24/11/440314758.png" alt="MVNNOOO Logo" class="header-logo">
             </div>
+            
+            <button class="mobile-menu-btn" aria-label="فتح/إغلاق القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+            
             <ul class="nav-links">
                 <li><a href="#home" class="active">الرئيسية</a></li>
                 <li><a href="#about">عن الفنان</a></li>
@@ -877,6 +1064,7 @@
         </nav>
     </header>
 
+    <!-- باقي الكود يبقى كما هو بدون تغيير -->
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-gradient"></div>
@@ -1092,21 +1280,21 @@
         <div class="albums-grid">
             <div class="album-card" onclick="window.open('https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N', '_blank')">
                 <div class="album-cover">
-                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="يمكن">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w-400&h-400&fit-crop" alt="يمكن">
                 </div>
                 <div class="album-title">يمكن</div>
                 <div class="album-year">٢٠٢٣ • أغنية منفردة</div>
             </div>
             <div class="album-card" onclick="window.open('https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N', '_blank')">
                 <div class="album-cover">
-                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop" alt="بداية">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w-400&h-400&fit-crop" alt="بداية">
                 </div>
                 <div class="album-title">بداية</div>
                 <div class="album-year">٢٠٢٢ • أغنية منفردة</div>
             </div>
             <div class="album-card" onclick="window.open('https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N', '_blank')">
                 <div class="album-cover">
-                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop" alt="رفرش">
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w-400&h-400&fit-crop" alt="رفرش">
                 </div>
                 <div class="album-title">رفرش</div>
                 <div class="album-year">٢٠٢٣ • أغنية منفردة</div>
@@ -1169,12 +1357,46 @@
         // تحديث السنة تلقائيًا
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+        // قائمة الجوال
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
+                    // إغلاق قائمة الجوال إذا كانت مفتوحة
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
@@ -1184,8 +1406,8 @@
         });
 
         // تفعيل التنقل النشط
-        const navLinks = document.querySelectorAll('.nav-links a');
-        const sections = document.querySelectorAll('section[id], footer[id]'); // تم تحديث هذا السطر
+        const allNavLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section[id], footer[id]');
 
         window.addEventListener('scroll', () => {
             let current = '';
@@ -1197,7 +1419,7 @@
                 }
             });
 
-            navLinks.forEach(link => {
+            allNavLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').substring(1) === current) {
                     link.classList.add('active');
@@ -1212,6 +1434,18 @@
 
         document.body.style.opacity = '0';
         document.body.style.transition = 'opacity 0.5s ease';
+        
+        // إضافة تأثير للصور عند التحميل
+        window.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', () => {
+                    img.style.opacity = '1';
+                });
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+            });
+        });
     </script>
 </body>
 </html>
