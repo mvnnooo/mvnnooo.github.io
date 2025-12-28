@@ -24,10 +24,6 @@
             --spotify-sidebar: #000000;
             --apple-pink: #FA2C76;
             --youtube-red: #FF0000;
-            --genius-orange: #FFFF64;
-            --boomplay-blue: #00A8FF;
-            --tidal-teal: #000000;
-            --soundcloud-orange: #FF5500;
         }
 
         body {
@@ -66,6 +62,7 @@
             opacity: 0.03;
         }
 
+        /* تحسين الهيدر للشاشات الصغيرة */
         header {
             position: fixed;
             top: 0;
@@ -103,6 +100,7 @@
             max-height: 40px;
         }
 
+        /* قائمة التنقل للجوال */
         .nav-links {
             display: flex;
             gap: 1.5rem;
@@ -141,6 +139,7 @@
             border-radius: 1px;
         }
 
+        /* زر القائمة للجوال */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -152,6 +151,7 @@
             z-index: 1001;
         }
 
+        /* تحسين قسم البطل (Hero) */
         .hero {
             height: 100vh;
             max-height: 900px;
@@ -391,6 +391,7 @@
             margin-left: 3px;
         }
 
+        /* أزرار المنصات الموسيقية */
         .platform-buttons {
             display: flex;
             gap: 0.5rem;
@@ -496,6 +497,7 @@
             border-color: rgba(255, 255, 255, 0.3);
         }
 
+        /* زر TikTok المخصص */
         .platform-btn.tiktok {
             background: #000000;
             color: #ffffff;
@@ -531,6 +533,7 @@
             border-color: rgba(255, 255, 255, 0.3);
         }
 
+        /* زر Facebook المخصص */
         .platform-btn.facebook {
             background: #1877F2;
             color: white;
@@ -543,6 +546,7 @@
             border-color: rgba(255, 255, 255, 0.3);
         }
 
+        /* زر Instagram المخصص */
         .platform-btn.instagram {
             background: linear-gradient(135deg, #833AB4, #E1306C, #FCAF45);
             color: white;
@@ -935,6 +939,7 @@
             filter: grayscale(0) contrast(1.2);
         }
 
+        /* قسم التضمينات الموسيقية */
         .embeds-section {
             background: var(--spotify-card);
             border-radius: 15px;
@@ -1005,22 +1010,6 @@
 
         .embed-icon.amazon {
             background: linear-gradient(135deg, #FF9900, #FFAC33);
-        }
-
-        .embed-icon.genius {
-            background: linear-gradient(135deg, #FFFF64, #FFCC00);
-        }
-
-        .embed-icon.boomplay {
-            background: linear-gradient(135deg, #00A8FF, #0097E6);
-        }
-
-        .embed-icon.tidal {
-            background: linear-gradient(135deg, #000000, #333333);
-        }
-
-        .embed-icon.soundcloud {
-            background: linear-gradient(135deg, #FF5500, #FF3300);
         }
 
         .embed-title {
@@ -1101,12 +1090,16 @@
             text-decoration: none;
         }
 
+        /* استعلامات الوسائط المحسنة */
+        
+        /* لأجهزة اللابتوب والصغيرة */
         @media (max-width: 1200px) {
             .hero-content {
                 padding-left: 1.5rem;
             }
         }
 
+        /* لأجهزة التابلت */
         @media (max-width: 1024px) {
             .artist-name {
                 font-size: clamp(2.5rem, 6vw, 4rem);
@@ -1123,6 +1116,7 @@
             }
         }
 
+        /* لأجهزة التابلت الصغيرة والموبايل الكبيرة */
         @media (max-width: 900px) {
             .artist-badge {
                 width: 180px;
@@ -1142,6 +1136,7 @@
             }
         }
 
+        /* لأجهزة الموبايل */
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
@@ -1233,6 +1228,7 @@
                 animation: mobilePan 40s infinite alternate ease-in-out;
             }
             
+            /* تحسينات لأزرار المنصات على الجوال */
             .platform-buttons {
                 gap: 0.4rem;
                 margin: 0.5rem 0;
@@ -1254,6 +1250,7 @@
                 text-align: center;
             }
             
+            /* تحسين لعنوان الفنان على الجوال */
             .artist-subtitle {
                 font-size: 0.9rem;
                 flex-direction: column;
@@ -1267,6 +1264,7 @@
             }
         }
 
+        /* لأجهزة الموبايل الصغيرة */
         @media (max-width: 480px) {
             .artist-name {
                 font-size: clamp(1.8rem, 6vw, 2.5rem);
@@ -1322,6 +1320,7 @@
                 min-height: 650px;
             }
             
+            /* تحسينات إضافية لأزرار المنصات على الجوال الصغير */
             .platform-buttons {
                 gap: 0.3rem;
             }
@@ -1331,10 +1330,12 @@
                 height: 36px;
             }
             
+            /* تحسين لعنوان الفنان على الجوال الصغير */
             .artist-subtitle {
                 font-size: 0.8rem;
             }
             
+            /* تحسينات للتضمينات على الجوال الصغير */
             .embed-item {
                 padding: 1rem;
             }
@@ -1350,6 +1351,7 @@
             }
         }
 
+        /* لأجهزة الموبايل الصغيرة جداً */
         @media (max-width: 360px) {
             .albums-grid {
                 grid-template-columns: 1fr;
@@ -1371,6 +1373,7 @@
             }
         }
 
+        /* لضمان ظهور شريط التمرير بشكل مناسب */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -1452,6 +1455,7 @@
                             <i class="fas fa-play"></i>
                         </button>
                         
+                        <!-- أزرار المنصات الموسيقية والاجتماعية المضافة -->
                         <div class="platform-buttons">
                             <a href="https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N" target="_blank" class="platform-btn spotify" title="Spotify">
                                 <i class="fab fa-spotify"></i>
@@ -1499,6 +1503,7 @@
         </div>
     </section>
     
+    <!-- قسم التضمينات الموسيقية مباشرة بعد الهيرو -->
     <section id="embeds">
         <div class="section-header">
             <h2 class="section-title">استمع مباشرة من المنصات</h2>
@@ -1602,70 +1607,6 @@
                         <iframe id='AmazonMusicEmbedB0G3QG2928' src='https://music.amazon.com/embed/B0G3QG2928/?id=UnhZbg1qFF&marketplaceId=ATVPDKIKX0DER&musicTerritory=US' width='100%' height='352px' frameBorder='0' style='border-radius:20px;max-width:100%'></iframe>
                     </div>
                     <p class="embed-description">استمع إلى MVNNOOO على Amazon Music. استمتع بأعلى جودة صوتية واكتشف المزيد من الموسيقى المشابهة على المنصة.</p>
-                </div>
-
-                <!-- تضمين Genius -->
-                <div class="embed-item">
-                    <div class="embed-header">
-                        <div class="embed-icon genius">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3 class="embed-title">Genius - كلمات الأغاني والتحليل</h3>
-                    </div>
-                    <div class="embed-wrapper">
-                        <blockquote class='rg_standalone_container' data-src='//genius.com/annotations/38050403/standalone_embed'>
-                            <a href='https://genius.com/38050403/Mvnnooo/Mvnnooo'>mvnnooo - منو</a><br>
-                            <a href='https://genius.com/artists/Mvnnooo'>&#8213; mvnnooo - منو</a>
-                        </blockquote>
-                        <script async crossorigin src='//genius.com/annotations/load_standalone_embeds.js'></script>
-                    </div>
-                    <p class="embed-description">اكتشف كلمات أغاني MVNNOOO وتحليلها على Genius. فهم المعاني العميقة وراء كلماته واستمتع بتجربة موسيقية أكثر ثراءً.</p>
-                </div>
-
-                <!-- تضمين Boomplay -->
-                <div class="embed-item">
-                    <div class="embed-header">
-                        <div class="embed-icon boomplay">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
-                        <h3 class="embed-title">Boomplay - الاستماع المباشر</h3>
-                    </div>
-                    <div class="embed-wrapper">
-                        <iframe src="https://www.boomplay.com/embed/225674671/MUSIC?colType=2&colID=120665505" width="100%" height="420" frameborder="0"></iframe>
-                    </div>
-                    <p class="embed-description">استمع إلى MVNNOOO على Boomplay، إحدى أكبر منصات الموسيقى في إفريقيا. اكتشف الموسيقى المحلية والعالمية بأفضل جودة.</p>
-                </div>
-
-                <!-- تضمين Tidal -->
-                <div class="embed-item">
-                    <div class="embed-header">
-                        <div class="embed-icon tidal">
-                            <i class="fas fa-water"></i>
-                        </div>
-                        <h3 class="embed-title">Tidal - الجودة العالية</h3>
-                    </div>
-                    <div class="embed-wrapper">
-                        <iframe src="https://embed.tidal.com/albums/477482857" width="100%" height="275" allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" style="color-scheme: light dark" title="TIDAL Embed Player"></iframe>
-                    </div>
-                    <p class="embed-description">استمع إلى MVNNOOO على Tidal بجودة صوت عالية الدقة. تمتع بتجربة استماع استثنائية مع دقة صوت تصل إلى FLAC 1411 kbps.</p>
-                </div>
-
-                <!-- تضمين SoundCloud -->
-                <div class="embed-item">
-                    <div class="embed-header">
-                        <div class="embed-icon soundcloud">
-                            <i class="fab fa-soundcloud"></i>
-                        </div>
-                        <h3 class="embed-title">SoundCloud - الإصدارات الحصرية</h3>
-                    </div>
-                    <div class="embed-wrapper">
-                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2008439487&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                            <a href="https://soundcloud.com/mvnno" title="MVNNO" target="_blank" style="color: #cccccc; text-decoration: none;">MVNNO</a> · 
-                            <a href="https://soundcloud.com/mvnno/manno-easy-ft-harelyofficial" title="MANNO - EASY Ft. @Harelyofficial (Official Audio) | ايزي - منو مع هارلي" target="_blank" style="color: #cccccc; text-decoration: none;">MANNO - EASY Ft. @Harelyofficial (Official Audio) | ايزي - منو مع هارلي</a>
-                        </div>
-                    </div>
-                    <p class="embed-description">اكتشف الإصدارات الحصرية والمختلطة لـ MVNNOOO على SoundCloud. استمع إلى الموسيقى المستقلة وتفاعل مباشرةً مع المجتمع الموسيقي.</p>
                 </div>
             </div>
         </div>
@@ -1801,6 +1742,7 @@
             <a href="#platforms" class="see-all">عرض جميع المنصات</a>
         </div>
         
+        <!-- الأغاني الشائعة مدمجة مع الألبومات -->
         <div class="popular-tracks" style="margin-bottom: 2rem;">
             <div class="section-header" style="margin-bottom: 1rem;">
                 <h3 style="font-size: 1.2rem; color: var(--spotify-green);">الأغاني الشائعة</h3>
@@ -1853,7 +1795,7 @@
                     <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="رفرش">
                 </div>
                 <div class="album-title">رفرش (refresh)</div>
-                <div class="album-year">2025 • أغنية منفردة</div>
+                <div class="album-year">2025٣ • أغنية منفردة</div>
             </div>
             <div class="album-card" onclick="window.open('https://open.spotify.com/intl-ar/track/6eBWrPzyIJGahoL49xnPol?si=c36dbdc754ec4f60', '_blank')">
                 <div class="album-cover">
@@ -1889,10 +1831,6 @@
                     <li><a href="https://www.facebook.com/mvnnoooo" target="_blank">Facebook</a></li>
                     <li><a href="https://www.instagram.com/mvnnoooo/" target="_blank">Instagram</a></li>
                     <li><a href="https://music.amazon.com/embed/B0G3QG2928/?id=UnhZbg1qFF&marketplaceId=ATVPDKIKX0DER&musicTerritory=US" target="_blank">Amazon Music</a></li>
-                    <li><a href="https://genius.com/artists/Mvnnooo" target="_blank">Genius</a></li>
-                    <li><a href="https://www.boomplay.com/artists/120665505" target="_blank">Boomplay</a></li>
-                    <li><a href="https://tidal.com/browse/artist/477482857" target="_blank">Tidal</a></li>
-                    <li><a href="https://soundcloud.com/mvnno" target="_blank">SoundCloud</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -1927,8 +1865,10 @@
     </footer>
 
     <script>
+        // تحديث السنة تلقائيًا
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+        // قائمة الجوال
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         
@@ -1944,6 +1884,7 @@
             }
         });
         
+        // إغلاق القائمة عند النقر على رابط
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -1953,11 +1894,13 @@
             });
         });
 
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
+                    // إغلاق قائمة الجوال إذا كانت مفتوحة
                     if (navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
                         const icon = mobileMenuBtn.querySelector('i');
@@ -1973,6 +1916,7 @@
             });
         });
 
+        // تفعيل التنقل النشط
         const allNavLinks = document.querySelectorAll('.nav-links a');
         const sections = document.querySelectorAll('section[id], footer[id]');
 
@@ -1994,6 +1938,7 @@
             });
         });
 
+        // تحميل الصفحة
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
         });
@@ -2001,6 +1946,7 @@
         document.body.style.opacity = '0';
         document.body.style.transition = 'opacity 0.5s ease';
         
+        // إضافة تأثير للصور عند التحميل
         window.addEventListener('DOMContentLoaded', () => {
             const images = document.querySelectorAll('img');
             images.forEach(img => {
@@ -2012,13 +1958,17 @@
             });
         });
         
+        // إضافة تأثيرات تفاعلية لأزرار المنصات
         document.querySelectorAll('.platform-btn').forEach(btn => {
             btn.addEventListener('mouseenter', function() {
                 const title = this.getAttribute('title');
+                // يمكن إضافة تأثيرات إضافية هنا
             });
         });
         
+        // تحسين تجربة التضمينات
         window.addEventListener('DOMContentLoaded', () => {
+            // إضافة مؤشر تحميل للتضمينات
             const iframes = document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
                 iframe.addEventListener('load', function() {
