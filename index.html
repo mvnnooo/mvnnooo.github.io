@@ -380,6 +380,21 @@
             }
         }
 
+        /* تضمين Anghami */
+        .anghami-container {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            background: var(--card);
+        }
+
+        .anghami-embed {
+            width: 100%;
+            height: 190px;
+            border: none;
+        }
+
         /* قائمة الأغاني */
         .track-list {
             display: flex;
@@ -716,6 +731,10 @@
             .album-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .anghami-embed {
+                height: 160px;
+            }
         }
 
         /* تحسينات للأجهزة ذات الشاشات الكبيرة */
@@ -730,6 +749,10 @@
                 left: 50%;
                 transform: translateX(-50%);
                 border-radius: var(--radius) var(--radius) 0 0;
+            }
+            
+            .anghami-embed {
+                height: 220px;
             }
         }
 
@@ -1112,6 +1135,27 @@
                     </div>
                 </div>
 
+                <!-- تضمين Anghami -->
+                <div class="collapsible-section" style="margin-top: 20px;">
+                    <div class="section-header" onclick="toggleSection('anghami-section')">
+                        <h3 class="section-title">استمع على Anghami</h3>
+                        <i class="fas fa-chevron-down section-icon" id="anghami-section-icon"></i>
+                    </div>
+                    <div class="section-content active" id="anghami-section">
+                        <div class="anghami-container">
+                            <iframe 
+                                src="https://widget.anghami.com/artist/26394054/?theme=fulldark&layout=wide&lang=en" 
+                                scrolling="no" 
+                                frameborder="0" 
+                                class="anghami-embed">
+                            </iframe>
+                        </div>
+                        <div style="text-align: center; margin-top: 15px; color: var(--gray); font-size: 0.9rem;">
+                            <p>استمع إلى موسيقى MVNNOOO على منصة Anghami، المنصة الموسيقية الرائدة في العالم العربي.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- قسم التواصل -->
                 <div class="collapsible-section" style="margin-top: 20px;">
                     <div class="section-header" onclick="toggleSection('contact')">
@@ -1242,7 +1286,7 @@
                             </div>
                             
                             <div style="margin-top: 20px; text-align: center;">
-                                <p>الإصدار: 1.1.0 (أضيف قسم البودكاست)</p>
+                                <p>الإصدار: 1.2.0 (أضيف تضمين Anghami)</p>
                                 <p style="margin-top: 10px;">© 2025 MVNNOOO. جميع الحقوق محفوظة.</p>
                             </div>
                         </div>
@@ -1309,6 +1353,9 @@
             
             // إضافة تأثيرات اللمس
             setupTouchEffects();
+            
+            // تحسين تضمين Anghami
+            enhanceAnghamiEmbed();
         });
 
         // إدارة التنقل بين الصفحات
@@ -1338,7 +1385,7 @@
         // إدارة الأقسام القابلة للطي
         function setupCollapsibleSections() {
             // فتح بعض الأقسام افتراضياً
-            const defaultOpenSections = ['popular-tracks', 'about-content'];
+            const defaultOpenSections = ['popular-tracks', 'about-content', 'anghami-section'];
             defaultOpenSections.forEach(sectionId => {
                 const section = document.getElementById(sectionId);
                 const icon = document.getElementById(sectionId + '-icon');
@@ -1383,7 +1430,7 @@
                 shareBtn.addEventListener('click', () => {
                     // نسخ الرابط للحافظة
                     navigator.clipboard.writeText(window.location.href).then(() => {
-                        alert('تم نسخ الرابط إلى الحافظة!');
+                        showToast('تم نسخ الرابط إلى الحافظة!');
                     });
                 });
             }
@@ -1457,6 +1504,32 @@
             touchElements.forEach(element => {
                 element.classList.add('touch-feedback');
             });
+        }
+
+        // تحسين تضمين Anghami
+        function enhanceAnghamiEmbed() {
+            const anghamiIframe = document.querySelector('.anghami-embed');
+            if (anghamiIframe) {
+                // جعل الإطار متجاوبًا
+                anghamiIframe.style.width = '100%';
+                
+                // تحديث الارتفاع تلقائيًا
+                window.addEventListener('resize', function() {
+                    adjustAnghamiHeight();
+                });
+                
+                adjustAnghamiHeight();
+            }
+        }
+
+        function adjustAnghamiHeight() {
+            const anghamiIframe = document.querySelector('.anghami-embed');
+            if (anghamiIframe) {
+                const width = anghamiIframe.clientWidth;
+                // احتفاظ بنسبة الأبعاد (600:190)
+                const height = Math.max(160, (width * 190) / 600);
+                anghamiIframe.style.height = height + 'px';
+            }
         }
 
         // التعامل مع وضع عدم الاتصال
