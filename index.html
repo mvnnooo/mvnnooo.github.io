@@ -942,14 +942,12 @@
                     </div>
                 </div>
 
+                <!-- أزرار الإجراءات السريعة -->
                 <div class="player-controls">
-                    <button class="play-btn" onclick="window.open('https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N', '_blank')">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="action-btn" onclick="window.open('https://www.soundon.global/bio/mvnnooo', '_blank')">
+                    <button class="action-btn" onclick="window.open('https://www.soundon.global/bio/mvnnooo', '_blank')" title="الملف الشخصي على SoundOn">
                         <i class="fas fa-link"></i>
                     </button>
-                    <button class="action-btn" onclick="window.open('mailto:itsjrmano@gmail.com')">
+                    <button class="action-btn" onclick="window.open('mailto:itsjrmano@gmail.com')" title="إرسال بريد إلكتروني">
                         <i class="fas fa-envelope"></i>
                     </button>
                 </div>
@@ -1428,8 +1426,26 @@
                         <div style="color: var(--gray); font-size: 0.9rem; line-height: 1.8;">
                             <p><strong>MVNNOOO - التطبيق الرسمي</strong></p>
                             <p>هذا التطبيق يوفر وصولاً سريعاً إلى جميع محتوى الفنان MVNNOOO على المنصات المختلفة، بما في ذلك الموسيقى، البودكاست، والمزيد.</p>
-                          
-                                <p style="margin-top: 10px;">© 2026 MVNNOOO. جميع الحقوق محفوظة.</p>
+                            
+                            <div style="margin-top: 20px;">
+                                <p><strong>مميزات التطبيق:</strong></p>
+                                <ul style="padding-right: 20px; margin-top: 10px;">
+                                    <li>تصفح سريع وسهل</li>
+                                    <li>واجهة مخصصة للجوال</li>
+                                    <li>وصول مباشر لجميع المنصات</li>
+                                    <li>قسم بودكاست حصري</li>
+                                    <li>تضمين Spotify للفنان</li>
+                                    <li>تضمين Amazon Music و Apple Music</li>
+                                    <li>تضمين Anghami</li>
+                                    <li>الوقت والتاريخ التلقائي</li>
+                                    <li>معلومات محدثة عن الفنان</li>
+                                    <li>دعم وضع عدم الاتصال</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin-top: 20px; text-align: center;">
+                                <p>الإصدار: 1.5.0 (تم إزالة زر تشغيل Spotify من الهيرو)</p>
+                                <p style="margin-top: 10px;">© <span id="current-year">2026</span> MVNNOOO. جميع الحقوق محفوظة.</p>
                             </div>
                         </div>
                     </div>
@@ -1501,6 +1517,9 @@
             
             // بدء تحديث الوقت
             startTimeUpdate();
+            
+            // تحديث سنة حقوق الملكية
+            updateCopyrightYear();
         });
 
         // إدارة التنقل بين الصفحات
@@ -1680,6 +1699,15 @@
                 // احتفاظ بنسبة الأبعاد (600:190)
                 const height = Math.max(160, (width * 190) / 600);
                 anghamiIframe.style.height = height + 'px';
+            }
+        }
+
+        // تحديث سنة حقوق الملكية تلقائياً
+        function updateCopyrightYear() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
             }
         }
 
