@@ -2,27 +2,26 @@
     "name": "MVNNOOO",
     "short_name": "MVNNOOO",
     "description": "فنان رابر من الإسكندرية، يصنع موسيقى التراب المصري والدريل",
-    "start_url": "/MVNNOOO-Website/",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#191414",
     "theme_color": "#1DB954",
     "orientation": "portrait",
-    "scope": "/MVNNOOO-Website/",
-    "lang": "ar",
-    "dir": "rtl",
-    "categories": ["music", "entertainment"],
     "icons": [
         {
-            "src": "assets/icons/icon-192.png",
+            "src": "https://www2.0zz0.com/2025/12/24/11/440314758.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "assets/icons/icon-512.png",
+            "src": "https://www2.0zz0.com/2025/12/24/11/440314758.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }
-    ]
+    ],
+    "categories": ["music", "entertainment"],
+    "lang": "ar",
+    "dir": "rtl"
 }
