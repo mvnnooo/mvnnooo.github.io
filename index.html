@@ -10,7 +10,7 @@
     
     <!-- تحسينات SEO الأساسية -->
     <title>MVNNOOO | منو فنان راب مصري - الإسكندرية | Egyptian Trap & Drill Music</title>
-    <meta name="description" content="🎵 MVNNOOO - منو فنان رابر مصري من الإسكندرية. استمع إلى موسيقى التراب المصري  (Egyptian Trap) والدريل (Drill) على Spotify, Apple Music, Anghami, YouTube, Shazam. اكتشف أغاني 'بداية (startup)' و 'رفرش (refresh)' الآن.">
+    <meta name="description" content="🎵 MVNNOOO - منو فنان رابر مصري من الإسكندرية. استمع إلى موسيقى التراب المصري (Egyptian Trap) والدريل (Drill) على Spotify, Apple Music, Anghami, YouTube, Shazam. اكتشف أغاني 'بداية (startup)' و 'رفرش (refresh)' الآن.">
     <meta name="keywords" content="MVNNOOO, منو, راب مصري, Egyptian Rap, Trap, Drill, الإسكندرية, موسيقى مصرية, رابر مصري, Egyptian Trap, Egyptian Drill">
     <meta name="author" content="MVNNOOO">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -31,7 +31,7 @@
     <meta property="twitter:url" content="https://mvnnooo.github.io/">
     <meta property="twitter:title" content="MVNNOOO | منو فنان راب مصري - الإسكندرية | Egyptian Trap & Drill Music">
     <meta property="twitter:description" content="🎵 MVNNOOO - فنان رابر مصري من الإسكندرية. استمع إلى موسيقى التراب المصري والدريل على جميع المنصات العالمية.">
-    <meta property="twitter:image" content="https://www2.0zz0.com/2025/12/24/11/440314758.png">
+    <meta property="twitter:image" content="https://a.top4top.io/p_3658wwpki1.png">
     <meta name="twitter:creator" content="@mvnnoooo">
     
     <!-- Structured Data / Schema.org -->
@@ -42,7 +42,7 @@
         "name": "MVNNOOO",
         "description": "فنان رابر مصري من الإسكندرية متخصص في موسيقى التراب المصري والدريل",
         "url": "https://mvnnooo.github.io/",
-        "image": "https://www2.0zz0.com/2025/12/24/10/193758201.jpg",
+        "image": "https://a.top4top.io/p_3658wwpki1.png",
         "genre": ["Egyptian Trap", "Egyptian Drill", "Arab Hip Hop"],
         "founder": {
             "@type": "Person",
@@ -123,6 +123,84 @@
         ::-webkit-scrollbar-thumb {
             background: var(--primary);
             border-radius: 3px;
+        }
+
+        /* Widget System */
+        .widget-system {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 15px;
+        }
+
+        .widget {
+            background: var(--card);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            margin-bottom: 0;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        .widget:hover {
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .widget-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .widget-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .widget-title i {
+            color: var(--primary);
+        }
+
+        .widget-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .widget-action-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            color: var(--gray);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .widget-action-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+        }
+
+        .widget-content {
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* شاشة التحميل */
@@ -216,30 +294,10 @@
             overflow-x: hidden;
         }
 
-        /* قسم الهيرو */
-        .hero-section {
-            padding: 20px 15px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(29, 185, 84, 0.1) 0%, rgba(25, 20, 20, 0.9) 100%),
-                        url('https://www2.0zz0.com/2025/12/24/10/193758201.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.6) blur(2px);
-            z-index: -1;
-        }
-
-        .artist-profile {
+        /* Widget: Artist Profile */
+        .artist-profile-widget .artist-profile {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
 
         .artist-avatar {
@@ -287,54 +345,28 @@
             margin-bottom: 20px;
         }
 
-        /* الوقت الحالي */
-        .current-time {
-            text-align: center;
-            margin: 15px 0;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-xs);
-        }
-
-        .time-display {
+        /* Widget: Current Time */
+        .current-time-widget .time-display {
             font-size: 1.1rem;
             color: var(--primary);
             font-weight: 600;
             direction: ltr;
             display: inline-block;
+            text-align: center;
+            width: 100%;
         }
 
-        .time-display .date {
+        .current-time-widget .time-display .date {
             color: var(--gray);
             font-size: 0.9rem;
         }
 
-        /* أزرار التشغيل */
-        .player-controls {
+        /* Widget: Quick Actions */
+        .quick-actions-widget .player-controls {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .play-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 8px 20px rgba(29, 185, 84, 0.4);
-            transition: var(--transition);
-        }
-
-        .play-btn:active {
-            transform: scale(0.95);
-            box-shadow: 0 4px 10px rgba(29, 185, 84, 0.6);
+            margin-bottom: 0;
         }
 
         .action-btn {
@@ -349,6 +381,7 @@
             justify-content: center;
             font-size: 1.2rem;
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .action-btn:active {
@@ -356,14 +389,68 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        /* تضمين Spotify */
-        .spotify-artist-embed {
+        /* Widget: Music Platforms */
+        .music-platforms-widget .quick-platforms {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 0;
+        }
+
+        .platform-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xs);
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .platform-btn:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .platform-icon {
+            font-size: 1.5rem;
+        }
+
+        .platform-icon.spotify { color: #1DB954; }
+        .platform-icon.apple { color: #FA2C76; }
+        .platform-icon.anghami { color: #D31027; }
+        .platform-icon.youtube { color: #FF0000; }
+        .platform-icon.tiktok { color: #000000; }
+        .platform-icon.instagram { 
+            background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .platform-icon.deezer { color: #00C7F2; }
+        .platform-icon.facebook { color: #1877F2; }
+        .platform-icon.shazam { 
+            background: var(--shazam-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .platform-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Widget: Spotify Embed */
+        .spotify-embed-widget .spotify-artist-embed {
             width: 100%;
-            margin: 25px 0;
+            margin: 0;
             border-radius: var(--radius-sm);
             overflow: hidden;
             background: var(--card);
-            box-shadow: var(--shadow);
         }
 
         .spotify-artist-embed iframe {
@@ -372,14 +459,13 @@
             border: none;
         }
 
-        /* تضمين Shazam */
-        .shazam-artist-embed {
+        /* Widget: Shazam Embed */
+        .shazam-embed-widget .shazam-artist-embed {
             width: 100%;
             max-width: 600px;
-            margin: 25px auto;
+            margin: 0 auto;
             border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
             background: var(--card);
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
@@ -426,176 +512,66 @@
             font-size: 0.9rem;
         }
 
-        /* تضمين Amazon Music */
-        .amazon-music-embed {
-            width: 100%;
-            margin: 25px 0;
-            border-radius: var(--radius-sm);
+        /* Widget: Album Grid */
+        .album-grid-widget .album-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 0;
+        }
+
+        .album-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-xs);
             overflow: hidden;
-            background: var(--card);
-            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
         }
 
-        /* تضمين Apple Music */
-        .apple-music-container {
+        .album-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .album-cover {
             width: 100%;
-            margin: 25px 0;
-            border-radius: var(--radius-sm);
+            aspect-ratio: 1;
             overflow: hidden;
-            background: var(--card);
-            box-shadow: var(--shadow);
         }
 
-        .apple-music-embed {
-            position: relative;
-            width: 100%;
-            padding-bottom: 180%;
-        }
-
-        .apple-music-embed iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .album-cover img {
             width: 100%;
             height: 100%;
-            border: 0;
-        }
-
-        /* أزرار المنصات السريعة */
-        .quick-platforms {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .platform-btn {
-            background: var(--card);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-xs);
-            padding: 15px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--light);
-            transition: var(--transition);
-        }
-
-        .platform-btn:active {
-            transform: scale(0.98);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .platform-icon {
-            font-size: 1.5rem;
-        }
-
-        .platform-icon.spotify { color: #1DB954; }
-        .platform-icon.apple { color: #FA2C76; }
-        .platform-icon.anghami { color: #D31027; }
-        .platform-icon.youtube { color: #FF0000; }
-        .platform-icon.tiktok { color: #000000; }
-        .platform-icon.instagram { 
-            background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .platform-icon.deezer { color: #00C7F2; }
-        .platform-icon.facebook { color: #1877F2; }
-        .platform-icon.shazam { 
-            background: var(--shazam-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .platform-name {
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        /* تضمين Anghami */
-        .anghami-container {
-            width: 100%;
-            margin: 20px 0;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            background: var(--card);
-        }
-
-        .anghami-embed {
-            width: 100%;
-            height: 190px;
-            border: none;
-        }
-
-        /* البطاقات القابلة للطي */
-        .collapsible-section {
-            margin: 20px 15px;
-        }
-
-        .section-header {
-            background: var(--card);
-            border-radius: var(--radius-sm);
-            padding: 15px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .section-header:active {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .section-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--light);
-        }
-
-        .section-icon {
-            color: var(--primary);
-            font-size: 1.2rem;
+            object-fit: cover;
             transition: transform 0.3s ease;
         }
 
-        .section-content {
-            background: var(--card);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            margin-bottom: 15px;
-            display: none;
+        .album-card:hover .album-cover img {
+            transform: scale(1.05);
         }
 
-        .section-content.active {
-            display: block;
-            animation: slideDown 0.3s ease;
+        .album-info {
+            padding: 12px;
         }
 
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .album-title {
+            color: var(--light);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
-        /* قسم Electronic Press Kit */
-        .epk-section {
-            background: var(--card);
-            border-radius: var(--radius-sm);
-            padding: 25px;
-            margin: 20px 15px;
+        .album-year {
+            color: var(--gray);
+            font-size: 0.8rem;
         }
 
-        .epk-header {
+        /* Widget: EPK Section */
+        .epk-widget .epk-header {
             text-align: center;
             margin-bottom: 25px;
         }
@@ -667,7 +643,7 @@
             transition: var(--transition);
         }
 
-        .stat-card:active {
+        .stat-card:hover {
             background: rgba(255, 255, 255, 0.1);
         }
 
@@ -699,6 +675,10 @@
             cursor: pointer;
             transition: var(--transition);
             font-size: 0.9rem;
+        }
+
+        .lang-tab:hover {
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .lang-tab.active {
@@ -763,7 +743,7 @@
             font-size: 0.9rem;
         }
 
-        .contact-btn:hover, .contact-btn:active {
+        .contact-btn:hover {
             background: rgba(255, 255, 255, 0.1);
         }
 
@@ -776,132 +756,8 @@
             font-size: 0.8rem;
         }
 
-        /* قائمة الأغاني */
-        .track-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .track-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-xs);
-            transition: var(--transition);
-        }
-
-        .track-item:active {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .track-number {
-            color: var(--gray);
-            font-size: 0.9rem;
-            min-width: 25px;
-        }
-
-        .track-info {
-            flex: 1;
-        }
-
-        .track-title {
-            color: var(--light);
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 3px;
-        }
-
-        .track-details {
-            color: var(--gray);
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .track-play {
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        /* بطاقات الألبومات */
-        .album-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .album-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-xs);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .album-card:active {
-            transform: scale(0.98);
-        }
-
-        .album-cover {
-            width: 100%;
-            aspect-ratio: 1;
-            overflow: hidden;
-        }
-
-        .album-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .album-info {
-            padding: 12px;
-        }
-
-        .album-title {
-            color: var(--light);
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .album-year {
-            color: var(--gray);
-            font-size: 0.8rem;
-        }
-
-        /* معلومات عن الفنان */
-        .about-content {
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        .about-content p {
-            margin-bottom: 15px;
-        }
-
-        .about-content strong {
-            color: var(--light);
-        }
-
-        /* قسم البودكاست */
-        .podcast-container {
-            background: var(--card);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            margin: 20px 15px;
-        }
-
-        .podcast-header {
+        /* Widget: Podcast */
+        .podcast-widget .podcast-header {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -958,13 +814,131 @@
             box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
         }
 
-        .spotify-button:hover, .spotify-button:active {
+        .spotify-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(29, 185,84, 0.4);
+            box-shadow: 0 6px 16px rgba(29, 185, 84, 0.4);
         }
 
-        .spotify-button i {
+        /* Widget: Social Media */
+        .social-media-widget .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-xs);
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .social-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .social-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .social-name {
+            color: var(--light);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .social-followers {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .social-link {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: #1ed760;
+        }
+
+        /* Widget: All Platforms */
+        .all-platforms-widget .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        /* Widget: Contact Info */
+        .contact-info-widget .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-xs);
+            transition: var(--transition);
+        }
+
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             font-size: 1.2rem;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-value {
+            color: var(--light);
+            font-weight: 600;
+        }
+
+        .contact-link {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
         }
 
         /* شريط التنقل السفلي */
@@ -1073,28 +1047,19 @@
                 height: 120px;
             }
             
-            .quick-platforms {
+            .music-platforms-widget .quick-platforms {
                 grid-template-columns: repeat(3, 1fr);
             }
             
-            .album-grid {
+            .album-grid-widget .album-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .anghami-embed {
-                height: 160px;
-            }
-            
-            .spotify-artist-embed iframe,
-            .amazon-music-embed iframe {
-                height: 300px;
             }
             
             .epk-title {
                 font-size: 1.5rem;
             }
             
-            .shazam-artist-embed iframe {
+            .shazam-embed-widget .shazam-artist-embed iframe {
                 height: 400px;
             }
         }
@@ -1106,6 +1071,11 @@
                 margin: 0 auto;
             }
             
+            .widget-system {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
             .bottom-nav {
                 max-width: 600px;
                 left: 50%;
@@ -1113,17 +1083,8 @@
                 border-radius: var(--radius) var(--radius) 0 0;
             }
             
-            .anghami-embed {
-                height: 220px;
-            }
-            
-            .spotify-artist-embed iframe,
-            .amazon-music-embed iframe {
-                height: 400px;
-            }
-            
-            .shazam-artist-embed iframe {
-                height: 500px;
+            .music-platforms-widget .quick-platforms {
+                grid-template-columns: repeat(5, 1fr);
             }
         }
 
@@ -1137,41 +1098,6 @@
                 min-height: calc(100vh - var(--bottom-nav-height) - 70px);
             }
         }
-
-        /* تأثيرات اللمس */
-        .touch-feedback {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .touch-feedback:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%, -50%);
-            transform-origin: 50% 50%;
-        }
-
-        .touch-feedback:active:after {
-            animation: ripple 0.6s ease-out;
-        }
-
-        @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(50, 50);
-                opacity: 0;
-            }
-        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1179,22 +1105,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- أيقونات متعددة الحجم للشعار في شريط العنوان -->
-    <link rel="icon" href="https://www2.0zz0.com/2025/12/24/11/440314758.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="https://www2.0zz0.com/2025/12/24/11/440314758.png" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="https://www2.0zz0.com/2025/12/24/11/440314758.png">
-    <link rel="manifest" href="data:application/json,{'name':'MVNNOOO','icons':[{'src':'https://www2.0zz0.com/2025/12/24/11/440314758.png','sizes':'192x192','type':'image/png'}]}">
-    <meta name="msapplication-TileImage" content="https://www2.0zz0.com/2025/12/24/11/440314758.png">
+    <link rel="icon" href="https://a.top4top.io/p_3658wwpki1.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="https://a.top4top.io/p_3658wwpki1.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="https://a.top4top.io/p_3658wwpki1.png">
+    <link rel="manifest" href="data:application/json,{'name':'MVNNOOO','icons':[{'src':'https://a.top4top.io/p_3658wwpki1.png','sizes':'192x192','type':'image/png'}]}">
+    <meta name="msapplication-TileImage" content="https://a.top4top.io/p_3658wwpki1.png">
 </head>
 <body>
     <!-- شاشة التحميل -->
     <div class="loader" id="loader">
-        <img src="https://www2.0zz0.com/2025/12/24/11/440314758.png" alt="MVNNOOO" class="loader-logo">
+        <img src="https://a.top4top.io/p_3658wwpki1.png" alt="MVNNOOO" class="loader-logo">
         <div class="loader-text">جاري التحميل...</div>
     </div>
 
     <!-- الهيدر العلوي -->
     <header class="main-header">
-        <img src="https://www2.0zz0.com/2025/12/24/11/440314758.png" alt="MVNNOOO" class="header-logo">
+        <img src="https://a.top4top.io/p_3658wwpki1.png" alt="MVNNOOO" class="header-logo">
         <div class="header-actions">
             <button class="header-btn" id="shareBtn" title="مشاركة">
                 <i class="fas fa-share-alt"></i>
@@ -1209,174 +1135,266 @@
     <main class="main-content">
         <!-- الصفحة الرئيسية -->
         <section id="home" class="content-section active">
-            <div class="hero-section">
-                <div class="hero-background"></div>
-                <div class="artist-profile">
-                    <div class="artist-avatar">
-                        <img src="https://www2.0zz0.com/2025/12/24/10/193758201.jpg" alt="MVNNOOO">
-                    </div>
-                    <h1 class="artist-name">MVNNOOO</h1>
-                    <div class="artist-tag">منو فنان رابر مصري</div>
-                    <div class="artist-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>الإسكندرية، مصر</span>
-                    </div>
-                </div>
-
-                <!-- الوقت الحالي -->
-                <div class="current-time">
-                    <div id="current-time-display" class="time-display">
-                        جاري تحميل الوقت...
-                    </div>
-                </div>
-
-                <!-- أزرار الإجراءات السريعة -->
-                <div class="player-controls">
-                    <button class="action-btn" onclick="window.open('https://www.whatsapp.com/channel/0029VaukjLxDDmFXdHk47d1g', '_blank')" title="الملف الشخصي على Whats App">
-                        <i class="fas fa-link"></i>
-                    </button>
-                    <button class="action-btn" onclick="window.open('mailto:itsjrmano@gmail.com')" title="إرسال بريد إلكتروني">
-                        <i class="fas fa-envelope"></i>
-                    </button>
-                </div>
-
-                <!-- تضمين Spotify للفنان -->
-                <div class="spotify-artist-embed">
-                    <iframe 
-                        data-testid="embed-iframe"
-                        style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/artist/5OpjwqoP6EVF7DiEgxbw6N?utm_source=generator&theme=0" 
-                        width="100%" 
-                        height="352" 
-                        frameborder="0" 
-                        allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy"
-                        title="MVNNOOO on Spotify">
-                    </iframe>
-                </div>
-
-                <!-- تضمين Shazam للفنان -->
-                <div class="shazam-artist-embed">
-                    <div class="shazam-header">
-                        <div class="shazam-title">
-                            <i class="fas fa-music"></i>
-                            Shazam Artist Profile
+            <div class="widget-system">
+                <!-- Widget: Artist Profile -->
+                <div class="widget artist-profile-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-user"></i>
+                            الملف الشخصي
+                        </h3>
+                        <div class="widget-actions">
+                            <button class="widget-action-btn" title="تحديث">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
                         </div>
-                        <div class="shazam-subtitle">اكتشف موسيقى MVNNOOO على Shazam</div>
                     </div>
-                    <iframe
-                        src="https://www.shazam.com/en-us/artist/mvnnooo/1856084660"
-                        width="100%"
-                        height="600"
-                        style="border:0;"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        allowfullscreen
-                        title="MVNNOOO on Shazam">
-                    </iframe>
+                    <div class="widget-content">
+                        <div class="artist-profile">
+                            <div class="artist-avatar">
+                                <img src="https://www2.0zz0.com/2025/12/24/10/193758201.jpg" alt="MVNNOOO">
+                            </div>
+                            <h1 class="artist-name">MVNNOOO</h1>
+                            <div class="artist-tag">منو فنان رابر مصري</div>
+                            <div class="artist-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>الإسكندرية، مصر</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="quick-platforms">
-                    <a href="https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Spotify">
-                        <i class="fab fa-spotify platform-icon spotify"></i>
-                        <span class="platform-name">Spotify</span>
-                    </a>
-                    <a href="https://music.apple.com/eg/artist/mvnnooo/1856084660?l=ar" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Apple Music">
-                        <i class="fab fa-apple platform-icon apple"></i>
-                        <span class="platform-name">Apple Music</span>
-                    </a>
-                    <a href="https://www.shazam.com/en-us/artist/mvnnooo/1856084660" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Shazam">
-                        <i class="fas fa-music platform-icon shazam"></i>
-                        <span class="platform-name">Shazam</span>
-                    </a>
-                    <a href="https://play.anghami.com/artist/26394054" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Anghami">
-                        <i class="fas fa-music platform-icon anghami"></i>
-                        <span class="platform-name">Anghami</span>
-                    </a>
-                    <a href="https://www.youtube.com/@MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="YouTube">
-                        <i class="fab fa-youtube platform-icon youtube"></i>
-                        <span class="platform-name">YouTube</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@mvnnoooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="TikTok">
-                        <i class="fab fa-tiktok platform-icon tiktok"></i>
-                        <span class="platform-name">TikTok</span>
-                    </a>
-                    <a href="https://www.instagram.com/mvnnoooo/" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram platform-icon instagram"></i>
-                        <span class="platform-name">Instagram</span>
-                    </a>
-                    <a href="https://deezer.com/artist/358069852" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Deezer">
-                        <i class="fab fa-deezer platform-icon deezer"></i>
-                        <span class="platform-name">Deezer</span>
-                    </a>
-                    <a href="https://www.facebook.com/mvnnoooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Facebook">
-                        <i class="fab fa-facebook-f platform-icon facebook"></i>
-                        <span class="platform-name">Facebook</span>
-                    </a>
+                <!-- Widget: Current Time -->
+                <div class="widget current-time-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-clock"></i>
+                            الوقت الحالي
+                        </h3>
+                        <div class="widget-actions">
+                            <button class="widget-action-btn" title="تحديث الوقت">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div id="current-time-display" class="time-display">
+                            جاري تحميل الوقت...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget: Quick Actions -->
+                <div class="widget quick-actions-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-bolt"></i>
+                            إجراءات سريعة
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="player-controls">
+                            <button class="action-btn" onclick="window.open('https://www.whatsapp.com/channel/0029VaukjLxDDmFXdHk47d1g', '_blank')" title="الملف الشخصي على Whats App">
+                                <i class="fas fa-link"></i>
+                            </button>
+                            <button class="action-btn" onclick="window.open('mailto:itsjrmano@gmail.com')" title="إرسال بريد إلكتروني">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="action-btn" onclick="window.open('https://www.tiktok.com/@mvnnoooo', '_blank')" title="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </button>
+                            <button class="action-btn" onclick="window.open('https://www.instagram.com/mvnnoooo/', '_blank')" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget: Spotify Embed -->
+                <div class="widget spotify-embed-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fab fa-spotify"></i>
+                            Spotify
+                        </h3>
+                        <div class="widget-actions">
+                            <button class="widget-action-btn" onclick="window.open('https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N', '_blank')" title="فتح في Spotify">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div class="spotify-artist-embed">
+                            <iframe 
+                                data-testid="embed-iframe"
+                                style="border-radius:12px" 
+                                src="https://open.spotify.com/embed/artist/5OpjwqoP6EVF7DiEgxbw6N?utm_source=generator&theme=0" 
+                                width="100%" 
+                                height="352" 
+                                frameborder="0" 
+                                allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy"
+                                title="MVNNOOO on Spotify">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget: Shazam Embed -->
+                <div class="widget shazam-embed-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-music"></i>
+                            Shazam
+                        </h3>
+                        <div class="widget-actions">
+                            <button class="widget-action-btn" onclick="window.open('https://www.shazam.com/en-us/artist/mvnnooo/1856084660', '_blank')" title="فتح في Shazam">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div class="shazam-artist-embed">
+                            <div class="shazam-header">
+                                <div class="shazam-title">
+                                    <i class="fas fa-music"></i>
+                                    Shazam Artist Profile
+                                </div>
+                                <div class="shazam-subtitle">اكتشف موسيقى MVNNOOO على Shazam</div>
+                            </div>
+                            <iframe
+                                src="https://www.shazam.com/en-us/artist/mvnnooo/1856084660"
+                                width="100%"
+                                height="500"
+                                style="border:0;"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen
+                                title="MVNNOOO on Shazam">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget: Music Platforms -->
+                <div class="widget music-platforms-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-headphones-alt"></i>
+                            المنصات الموسيقية
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="quick-platforms">
+                            <a href="https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Spotify">
+                                <i class="fab fa-spotify platform-icon spotify"></i>
+                                <span class="platform-name">Spotify</span>
+                            </a>
+                            <a href="https://music.apple.com/eg/artist/mvnnooo/1856084660?l=ar" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Apple Music">
+                                <i class="fab fa-apple platform-icon apple"></i>
+                                <span class="platform-name">Apple Music</span>
+                            </a>
+                            <a href="https://www.shazam.com/en-us/artist/mvnnooo/1856084660" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Shazam">
+                                <i class="fas fa-music platform-icon shazam"></i>
+                                <span class="platform-name">Shazam</span>
+                            </a>
+                            <a href="https://play.anghami.com/artist/26394054" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Anghami">
+                                <i class="fas fa-music platform-icon anghami"></i>
+                                <span class="platform-name">Anghami</span>
+                            </a>
+                            <a href="https://www.youtube.com/@MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube platform-icon youtube"></i>
+                                <span class="platform-name">YouTube</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@mvnnoooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="TikTok">
+                                <i class="fab fa-tiktok platform-icon tiktok"></i>
+                                <span class="platform-name">TikTok</span>
+                            </a>
+                            <a href="https://www.instagram.com/mvnnoooo/" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram platform-icon instagram"></i>
+                                <span class="platform-name">Instagram</span>
+                            </a>
+                            <a href="https://deezer.com/artist/358069852" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Deezer">
+                                <i class="fab fa-deezer platform-icon deezer"></i>
+                                <span class="platform-name">Deezer</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- صفحة الموسيقى -->
         <section id="music" class="content-section">
-            <div class="hero-section">
-                <h2 style="text-align: center; margin-bottom: 25px; color: var(--primary);">جميع المنصات الموسيقية</h2>
-                
-                <div class="quick-platforms" style="grid-template-columns: repeat(3, 1fr);">
-                    <a href="https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Spotify">
-                        <i class="fab fa-spotify platform-icon spotify"></i>
-                        <span class="platform-name">Spotify</span>
-                    </a>
-                    <a href="https://music.apple.com/eg/artist/mvnnooo/1856084660?l=ar" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Apple Music">
-                        <i class="fab fa-apple platform-icon apple"></i>
-                        <span class="platform-name">Apple Music</span>
-                    </a>
-                    <a href="https://www.shazam.com/en-us/artist/mvnnooo/1856084660" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Shazam">
-                        <i class="fas fa-music platform-icon shazam"></i>
-                        <span class="platform-name">Shazam</span>
-                    </a>
-                    <a href="https://play.anghami.com/artist/26394054" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Anghami">
-                        <i class="fas fa-music platform-icon anghami"></i>
-                        <span class="platform-name">Anghami</span>
-                    </a>
-                    <a href="https://www.youtube.com/@MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="YouTube">
-                        <i class="fab fa-youtube platform-icon youtube"></i>
-                        <span class="platform-name">YouTube</span>
-                    </a>
-                    <a href="https://deezer.com/artist/358069852" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Deezer">
-                        <i class="fab fa-deezer platform-icon deezer"></i>
-                        <span class="platform-name">Deezer</span>
-                    </a>
-                    <a href="https://tidal.com/artist/70289375" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Tidal">
-                        <i class="fas fa-wave-square platform-icon"></i>
-                        <span class="platform-name">Tidal</span>
-                    </a>
-                    <a href="https://music.amazon.com/artists/B0G3QG2928/mvnnooo?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_x6JSx5EZyvWdihUWBnYM6a5Mt" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Amazon Music">
-                        <i class="fab fa-amazon platform-icon"></i>
-                        <span class="platform-name">Amazon Music</span>
-                    </a>
-                    <a href="https://www.boomplay.com/artists/120665505?from=search" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Boomplay">
-                        <i class="fas fa-play-circle platform-icon"></i>
-                        <span class="platform-name">Boomplay</span>
-                    </a>
-                    <a href="https://www.last.fm/music/MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Last.fm">
-                        <i class="fab fa-lastfm platform-icon"></i>
-                        <span class="platform-name">Last.fm</span>
-                    </a>
-                    <a href="https://genius.com/artists/Mvnnooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Genius">
-                        <i class="fas fa-brain platform-icon"></i>
-                        <span class="platform-name">Genius</span>
-                    </a>
+            <div class="widget-system">
+                <!-- Widget: All Platforms -->
+                <div class="widget all-platforms-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-globe"></i>
+                            جميع المنصات الموسيقية
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="platforms-grid">
+                            <a href="https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Spotify">
+                                <i class="fab fa-spotify platform-icon spotify"></i>
+                                <span class="platform-name">Spotify</span>
+                            </a>
+                            <a href="https://music.apple.com/eg/artist/mvnnooo/1856084660?l=ar" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Apple Music">
+                                <i class="fab fa-apple platform-icon apple"></i>
+                                <span class="platform-name">Apple Music</span>
+                            </a>
+                            <a href="https://www.shazam.com/en-us/artist/mvnnooo/1856084660" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Shazam">
+                                <i class="fas fa-music platform-icon shazam"></i>
+                                <span class="platform-name">Shazam</span>
+                            </a>
+                            <a href="https://play.anghami.com/artist/26394054" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Anghami">
+                                <i class="fas fa-music platform-icon anghami"></i>
+                                <span class="platform-name">Anghami</span>
+                            </a>
+                            <a href="https://www.youtube.com/@MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube platform-icon youtube"></i>
+                                <span class="platform-name">YouTube</span>
+                            </a>
+                            <a href="https://deezer.com/artist/358069852" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Deezer">
+                                <i class="fab fa-deezer platform-icon deezer"></i>
+                                <span class="platform-name">Deezer</span>
+                            </a>
+                            <a href="https://tidal.com/artist/70289375" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Tidal">
+                                <i class="fas fa-wave-square platform-icon"></i>
+                                <span class="platform-name">Tidal</span>
+                            </a>
+                            <a href="https://music.amazon.com/artists/B0G3QG2928/mvnnooo?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_x6JSx5EZyvWdihUWBnYM6a5Mt" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Amazon Music">
+                                <i class="fab fa-amazon platform-icon"></i>
+                                <span class="platform-name">Amazon Music</span>
+                            </a>
+                            <a href="https://www.boomplay.com/artists/120665505?from=search" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Boomplay">
+                                <i class="fas fa-play-circle platform-icon"></i>
+                                <span class="platform-name">Boomplay</span>
+                            </a>
+                            <a href="https://www.last.fm/music/MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Last.fm">
+                                <i class="fab fa-lastfm platform-icon"></i>
+                                <span class="platform-name">Last.fm</span>
+                            </a>
+                            <a href="https://genius.com/artists/Mvnnooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Genius">
+                                <i class="fas fa-brain platform-icon"></i>
+                                <span class="platform-name">Genius</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- قسم الألبومات -->
-                <div class="collapsible-section" style="margin-top: 30px;">
-                    <div class="section-header" onclick="toggleSection('albums')">
-                        <h3 class="section-title">الألبومات والأغاني المنفردة</h3>
-                        <i class="fas fa-chevron-down section-icon" id="albums-icon"></i>
+                <!-- Widget: Album Grid -->
+                <div class="widget album-grid-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-compact-disc"></i>
+                            الألبومات والأغاني المنفردة
+                        </h3>
                     </div>
-                    <div class="section-content" id="albums">
+                    <div class="widget-content">
                         <div class="album-grid">
                             <div class="album-card" onclick="window.open('https://www.youtube.com/watch?v=MkJL3wVTBWg&list=OLAK5uy_mOCRrvgqAhT_0h1XESGpDVTWxp72tvvEk', '_blank')" role="button" tabindex="0">
                                 <div class="album-cover">
@@ -1404,58 +1422,47 @@
 
         <!-- صفحة البودكاست -->
         <section id="podcast" class="content-section">
-            <div class="hero-section">
-                <div class="podcast-container">
-                    <div class="podcast-header">
-                        <h2 class="podcast-title">البودكاست</h2>
-                        <p class="podcast-subtitle">استمع إلى حلقات البودكاست الحصرية مع MVNNOOO</p>
+            <div class="widget-system">
+                <!-- Widget: Podcast -->
+                <div class="widget podcast-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-podcast"></i>
+                            البودكاست
+                        </h3>
+                        <div class="widget-actions">
+                            <button class="widget-action-btn" onclick="window.open('https://open.spotify.com/show/3cjj3GLIH3DN2BOfSE4RSM', '_blank')" title="فتح البودكاست">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
                     </div>
-                    
-                    <div class="spotify-embed">
-                        <!-- تضمين حلقة البودكاست من Spotify -->
-                        <iframe 
-                            data-testid="embed-iframe"
-                            style="border-radius:12px" 
-                            src="https://open.spotify.com/embed/episode/04fqfZRmW7SlTWdLdsQWtq?utm_source=generator&theme=0" 
-                            width="100%" 
-                            height="352" 
-                            frameBorder="0" 
-                            allowfullscreen="" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                            loading="lazy"
-                            title="MVNNOOO Podcast on Spotify">
-                        </iframe>
-                    </div>
-                    
-                    <div class="spotify-cta">
-                        <p class="spotify-cta-text">استمع إلى المزيد من الحلقات على تطبيق Spotify</p>
-                        <a href="https://open.spotify.com/show/3cjj3GLIH3DN2BOfSE4RSM" target="_blank" class="spotify-button" rel="noopener noreferrer">
-                            <i class="fab fa-spotify"></i>
-                            <span>استمع على Spotify</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- معلومات إضافية عن البودكاست -->
-                <div class="collapsible-section" style="margin-top: 30px;">
-                    <div class="section-header" onclick="toggleSection('podcast-info')">
-                        <h3 class="section-title">عن البودكاست</h3>
-                        <i class="fas fa-chevron-down section-icon" id="podcast-info-icon"></i>
-                    </div>
-                    <div class="section-content" id="podcast-info">
-                        <div class="about-content">
-                            <p>في بودكاست MVNNOOO، نستكشف عالم الموسيقى، الإبداع، وحياة الفنانين. يناقش MVNNOOO رحلته الفنية، التحديات، والنصائح للفنانين الناشئين.</p>
-                            
-                            <p><strong>مواضيع الحلقات:</strong></p>
-                            <ul style="padding-right: 20px; margin-bottom: 15px; color: var(--gray);">
-                                <li>صناعة الموسيقى والتوزيع</li>
-                                <li>تجربة الفنانين المستقلين</li>
-                                <li>مشهد التراب والدريل المصري</li>
-                                <li>نصائح للفنانين الناشئين</li>
-                                <li>خلف كواليس صناعة الأغاني</li>
-                            </ul>
-                            
-                            <p>يتم نشر حلقات جديدة شهريًا على منصة Spotify. اشترك في القناة لتلقي إشعارات بالحلقات الجديدة.</p>
+                    <div class="widget-content">
+                        <div class="podcast-header">
+                            <h2 class="podcast-title">البودكاست</h2>
+                            <p class="podcast-subtitle">استمع إلى حلقات البودكاست الحصرية مع MVNNOOO</p>
+                        </div>
+                        
+                        <div class="spotify-embed">
+                            <iframe 
+                                data-testid="embed-iframe"
+                                style="border-radius:12px" 
+                                src="https://open.spotify.com/embed/episode/04fqfZRmW7SlTWdLdsQWtq?utm_source=generator&theme=0" 
+                                width="100%" 
+                                height="352" 
+                                frameBorder="0" 
+                                allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy"
+                                title="MVNNOOO Podcast on Spotify">
+                            </iframe>
+                        </div>
+                        
+                        <div class="spotify-cta">
+                            <p class="spotify-cta-text">استمع إلى المزيد من الحلقات على تطبيق Spotify</p>
+                            <a href="https://open.spotify.com/show/3cjj3GLIH3DN2BOfSE4RSM" target="_blank" class="spotify-button" rel="noopener noreferrer">
+                                <i class="fab fa-spotify"></i>
+                                <span>استمع على Spotify</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1464,496 +1471,206 @@
 
         <!-- صفحة عن الفنان -->
         <section id="about" class="content-section">
-            <div class="hero-section">
-                <!-- قسم Electronic Press Kit المعدل -->
-                <div class="epk-section">
-                    <div class="epk-header">
-                        <h2 class="epk-title">MVNNOOO - Electronic Press Kit</h2>
-                        <p class="epk-subtitle">معلومات للصحافة والإعلام - Professional Press Materials</p>
+            <div class="widget-system">
+                <!-- Widget: EPK Section -->
+                <div class="widget epk-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-id-card"></i>
+                            Electronic Press Kit
+                        </h3>
                     </div>
-                    
-                    <div class="epk-tagline">
-                  "الكلام بيجيب كلام.. كان اخركو مش تمام.. كان اخركم الكلام.. اصلكم كدا معروفين."
-"Sound from the streets, vibes for the world."
-                    </div>
-                    
-                    <div class="quick-facts">
-                        <div class="fact-item">Trap / Drill / Electronic Street Sound</div>
-                        <div class="fact-item">Alexandria, Egypt (El Agamy)</div>
-                        <div class="fact-item">Active Since 2020</div>
-                    </div>
-                    
-                    <div class="language-tabs">
-                        <button class="lang-tab active" onclick="switchLang('ar')">العربية</button>
-                        <button class="lang-tab" onclick="switchLang('en')">English</button>
-                    </div>
-                    
-                    <!-- المحتوى العربي -->
-                    <div class="lang-content active" id="epk-ar">
-                        <!-- معلومات عن الفنان - النص المنقول -->
-                        <div class="epk-content">
-                            <h3 style="color: var(--light); margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">عن الفنان</h3>
-                            <p><strong>البداية:</strong> وُلد MVNNOOO في العجمي، الإسكندرية عام 1992. نشأ في شوارع الإسكندرية النابضة بالحياة، حيث تعرض للطاقة الخام للحياة الحضرية، والتي أصبحت فيما بعد تأثيراً رئيسياً على موسيقاه.</p>
-                            
-                            <p><strong>المسيرة الموسيقية:</strong> بدأ MVNNOOO رحلته الموسيقية في عام 2020، مصنعاً أسلوباً مميزاً يدمج التراب المصري والدريل والأصوات الإلكترونية للشارع. تتميز موسيقاه بالإيقاعات الثقيلة، والسرد الواقعي، والطاقة المستوحاة من الشارع.</p>
-                            
-                            <p><strong>الأسلوب الموسيقي:</strong></p>
-                            <ul class="epk-list">
-                                <li>Egyptian Trap مع جودة إنتاج عالمية</li>
-                                <li>Drill ممزوج بسرديات الشارع</li>
-                                <li>Electronic Street Sound</li>
-                                <li>Dark Minimal جماليات</li>
-                                <li>Arab Hip Hop</li>
-                            </ul>
-                            
-                            <p><strong>التعاونات:</strong> تعاون MVNNOOO مع فنانين آخرين بما في ذلك <strong>HARLY</strong>، ويواصل دفع حدود المشهد الموسيقي الحضري المصري.</p>
+                    <div class="widget-content">
+                        <div class="epk-header">
+                            <h2 class="epk-title">MVNNOOO - Electronic Press Kit</h2>
+                            <p class="epk-subtitle">معلومات للصحافة والإعلام - Professional Press Materials</p>
                         </div>
                         
-                        <!-- الإحصائيات المنقولة من الصفحة الرئيسية -->
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-number">30+</div>
-                                <div class="stat-label">أغنية منشورة</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">15+</div>
-                                <div class="stat-label">منصة عالمية</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">٢٠٢٠</div>
-                                <div class="stat-label">سنة البدء</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">∞</div>
-                                <div class="stat-label">طاقة إبداعية</div>
-                            </div>
+                        <div class="epk-tagline">
+                            "الكلام بيجيب كلام.. كان اخركو مش تمام.. كان اخركم الكلام.. اصلكم كدا معروفين."
+                            "Sound from the streets, vibes for the world."
                         </div>
                         
-                        <!-- تضمين Shazam في صفحة عن الفنان -->
-                        <div class="shazam-artist-embed" style="margin: 30px 0;">
-                            <div class="shazam-header">
-                                <div class="shazam-title">
-                                    <i class="fas fa-music"></i>
-                                    Shazam Artist Profile
+                        <div class="quick-facts">
+                            <div class="fact-item">Trap / Drill / Electronic Street Sound</div>
+                            <div class="fact-item">Alexandria, Egypt (El Agamy)</div>
+                            <div class="fact-item">Active Since 2020</div>
+                        </div>
+                        
+                        <div class="language-tabs">
+                            <button class="lang-tab active" onclick="switchLang('ar')">العربية</button>
+                            <button class="lang-tab" onclick="switchLang('en')">English</button>
+                        </div>
+                        
+                        <!-- المحتوى العربي -->
+                        <div class="lang-content active" id="epk-ar">
+                            <div class="epk-content">
+                                <h3 style="color: var(--light); margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">عن الفنان</h3>
+                                <p><strong>البداية:</strong> وُلد MVNNOOO في العجمي، الإسكندرية عام 1992. نشأ في شوارع الإسكندرية النابضة بالحياة، حيث تعرض للطاقة الخام للحياة الحضرية، والتي أصبحت فيما بعد تأثيراً رئيسياً على موسيقاه.</p>
+                                
+                                <p><strong>المسيرة الموسيقية:</strong> بدأ MVNNOOO رحلته الموسيقية في عام 2020، مصنعاً أسلوباً مميزاً يدمج التراب المصري والدريل والأصوات الإلكترونية للشارع. تتميز موسيقاه بالإيقاعات الثقيلة، والسرد الواقعي، والطاقة المستوحاة من الشارع.</p>
+                                
+                                <p><strong>الأسلوب الموسيقي:</strong></p>
+                                <ul class="epk-list">
+                                    <li>Egyptian Trap مع جودة إنتاج عالمية</li>
+                                    <li>Drill ممزوج بسرديات الشارع</li>
+                                    <li>Electronic Street Sound</li>
+                                    <li>Dark Minimal جماليات</li>
+                                    <li>Arab Hip Hop</li>
+                                </ul>
+                                
+                                <p><strong>التعاونات:</strong> تعاون MVNNOOO مع فنانين آخرين بما في ذلك <strong>HARLY</strong>، ويواصل دفع حدود المشهد الموسيقي الحضري المصري.</p>
+                            </div>
+                            
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">30+</div>
+                                    <div class="stat-label">أغنية منشورة</div>
                                 </div>
-                                <div class="shazam-subtitle">اكتشف موسيقى MVNNOOO على Shazam</div>
-                            </div>
-                            <iframe
-                                src="https://www.shazam.com/en-us/artist/mvnnooo/1856084660"
-                                width="100%"
-                                height="500"
-                                style="border:0;"
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                allowfullscreen
-                                title="MVNNOOO on Shazam">
-                            </iframe>
-                        </div>
-
-                        <!-- معلومات إضافية من الـ EPK الأصلي -->
-                        <div class="epk-content">
-                            <p><strong>شركاء التوزيع:</strong> Sound On Global & RouteNote</p>
-                            <p><strong>متوفر على:</strong> Spotify, Apple Music, Anghami, Deezer, Tidal, Amazon Music, YouTube Music, Shazam, BoomPlay, Genius, Qobuz, tiktok, instgram, facebook, iHeart</p>
-                            <p><strong>تعاون بارز:</strong> A7MED HARLY</p>
-                            <p><strong>أسلوب الصوت:</strong> Dark Minimal / Street Energy / Heavy Rhythms / Electronic shaabi</p>
-                        </div>
-                        
-                        <!-- وسائل التواصل -->
-                        <div class="epk-content">
-                            <h3 style="color: var(--light); margin: 20px 0 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">وسائل التواصل</h3>
-                            <div class="contact-buttons">
-                                <a href="https://facebook.com/mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fab fa-facebook-f" style="color: #1877F2;"></i>
-                                    <span>Facebook</span>
-                                </a>
-                                <a href="https://instagram.com/mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fab fa-instagram" style="background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                                    <span>Instagram</span>
-                                </a>
-                                <a href="https://www.tiktok.com/@mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fab fa-tiktok" style="color: #000000;"></i>
-                                    <span>TikTok</span>
-                                </a>
-                                <a href="https://threads.net/@mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fas fa-comment" style="color: #ffffff;"></i>
-                                    <span>Threads</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- المحتوى الإنجليزي -->
-                    <div class="lang-content english" id="epk-en">
-                        <!-- About the Artist - Translated Content -->
-                        <div class="epk-content">
-                            <h3 style="color: var(--light); margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">About the Artist</h3>
-                            <p><strong>The Beginning:</strong> MVNNOOO was born in El Agamy, Alexandria in 1992. He grew up in the vibrant streets of Alexandria, where he was exposed to the raw energy of urban life, which later became a major influence on his music.</p>
-                            
-                            <p><strong>Musical Journey:</strong> MVNNOOO began his musical journey in 2020, crafting a distinctive style that blends Egyptian Trap, Drill, and electronic street sounds. His music is characterized by heavy rhythms, realistic storytelling, and street-inspired energy.</p>
-                            
-                            <p><strong>Musical Style:</strong></p>
-                            <ul class="epk-list">
-                                <li>Egyptian Trap with international production quality</li>
-                                <li>Drill mixed with street narratives</li>
-                                <li>Electronic Street Sound</li>
-                                <li>Dark Minimal aesthetics</li>
-                                <li>Arab Hip Hop</li>
-                            </ul>
-                            
-                            <p><strong>Collaborations:</strong> MVNNOOO has collaborated with other artists including <strong>HARLY</strong>, and continues to push the boundaries of the Egyptian urban music scene.</p>
-                        </div>
-                        
-                        <!-- Stats from Homepage -->
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-number">20+</div>
-                                <div class="stat-label">Released Songs</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">13+</div>
-                                <div class="stat-label">Global Platforms</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">2020</div>
-                                <div class="stat-label">Starting Year</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">∞</div>
-                                <div class="stat-label">Creative Energy</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Shazam Embed in About Section -->
-                        <div class="shazam-artist-embed" style="margin: 30px 0;">
-                            <div class="shazam-header">
-                                <div class="shazam-title">
-                                    <i class="fas fa-music"></i>
-                                    Shazam Artist Profile
+                                <div class="stat-card">
+                                    <div class="stat-number">15+</div>
+                                    <div class="stat-label">منصة عالمية</div>
                                 </div>
-                                <div class="shazam-subtitle">Discover MVNNOOO's music on Shazam</div>
-                            </div>
-                            <iframe
-                                src="https://www.shazam.com/en-us/artist/mvnnooo/1856084660"
-                                width="100%"
-                                height="500"
-                                style="border:0;"
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                allowfullscreen
-                                title="MVNNOOO on Shazam">
-                            </iframe>
-                        </div>
-                        
-                        <!-- Additional Info from Original EPK -->
-                        <div class="epk-content">
-                            <p><strong>Distribution Partners:</strong> Sound On Global & RouteNote</p>
-                            <p><strong>Available On:</strong> Spotify, Apple Music, Anghami, Deezer, Tidal, Amazon Music, YouTube Music, Shazam, Qobuz, BoomPlay, iHeart</p>
-                            <p><strong>Notable Collaboration:</strong> A7MED HARLY</p>
-                            <p><strong>Sound Style:</strong> Dark Minimal / Street Energy / Heavy Rhythms</p>
-                        </div>
-                        
-                        <!-- Social Media -->
-                        <div class="epk-content">
-                            <h3 style="color: var(--light); margin: 20px 0 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">Social Media</h3>
-                            <div class="contact-buttons">
-                                <a href="https://facebook.com/mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fab fa-facebook-f" style="color: #1877F2;"></i>
-                                    <span>Facebook</span>
-                                </a>
-                                <a href="https://instagram.com/mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fab fa-instagram" style="background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                                    <span>Instagram</span>
-                                </a>
-                                <a href="https://www.tiktok.com/@mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fab fa-tiktok" style="color: #000000;"></i>
-                                    <span>TikTok</span>
-                                </a>
-                                <a href="https://threads.net/@mvnnoooo" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                                    <i class="fas fa-comment" style="color: #ffffff;"></i>
-                                    <span>Threads</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- الاتصال والحجز -->
-                    <div class="epk-content" style="text-align: center;">
-                        <h3 style="color: var(--light); margin: 25px 0 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">للإتصال والحجز / Contact & Booking</h3>
-                        
-                        <a href="mailto:itsjrmano@gmail.com" style="display: inline-block; background: var(--primary); color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 15px 0;">
-                            itsjrmano@gmail.com
-                        </a>
-                        
-                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 10px;">أو عبر إنستجرام / Or via Instagram:</p>
-                        <a href="https://instagram.com/mvnnoooo" target="_blank" style="display: inline-block; background: var(--card); color: var(--light); padding: 8px 20px; border-radius: 20px; text-decoration: none; font-weight: bold; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;" rel="noopener noreferrer">
-                            @mvnnoooo
-                        </a>
-                        
-                        <div style="color: var(--gray); font-size: 0.9rem; text-align: right;">
-                            <p style="margin-bottom: 10px;"><strong>لـ / For:</strong></p>
-                            <ul class="epk-list">
-                                <li>استفسارات الحجز والحفلات / Booking inquiries</li>
-                                <li>طلبات التعاون / Collaboration requests</li>
-                                <li>مقابلات الصحافة والإعلام / Press & media interviews</li>
-                                <li>فرص الترخيص والمزامنة / Licensing & sync opportunities</li>
-                                <li>استفسارات عامة / General inquiries</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- روابط إضافية -->
-                    <div style="text-align: center; margin-top: 25px;">
-                        <a href="https://mvnnooo.github.io/" target="_blank" style="display: inline-block; background: var(--primary); color: white; padding: 12px 25px; border-radius: var(--radius-xs); text-decoration: none; font-weight: bold; margin-right: 10px;" rel="noopener noreferrer">
-                            <i class="fas fa-external-link-alt"></i> زيارة الموقع الرسمي للـ EPK
-                        </a>
-                        <a href="https://drive.google.com/drive/u/2/folders/1WfgTBvOOgr5GLIwvzJ8hd4pS0dlZQ-Ai" target="_blank" style="display: inline-block; background: var(--card); color: var(--light); padding: 12px 25px; border-radius: var(--radius-xs); text-decoration: none; font-weight: bold; border: 1px solid rgba(255,255,255,0.1);" rel="noopener noreferrer">
-                            <i class="fas fa-images"></i> الصور الصحفية على Google Drive
-                        </a>
-                    </div>
-                    
-                    <div class="epk-footer">
-                        <p>آخر تحديث / Last Updated: ديسمبر 2024 / December 2024</p>
-                        <p style="margin-top: 5px;">© 2024 MVNNOOO. جميع الحقوق محفوظة / All rights reserved.</p>
-                    </div>
-                </div>
-
-                <!-- تضمين Amazon Music -->
-                <div class="collapsible-section" style="margin-top: 20px;">
-                    <div class="section-header" onclick="toggleSection('amazon-music-section')">
-                        <h3 class="section-title">Amazon Music</h3>
-                        <i class="fas fa-chevron-down section-icon" id="amazon-music-section-icon"></i>
-                    </div>
-                    <div class="section-content active" id="amazon-music-section">
-                        <div class="amazon-music-embed">
-                            <iframe 
-                                id='AmazonMusicEmbedB0G3QG2928' 
-                                src='https://music.amazon.com/embed/B0G3QG2928/?id=78kppSU9cH&marketplaceId=ATVPDKIKX0DER&musicTerritory=US' 
-                                width='100%' 
-                                height='352px' 
-                                frameBorder='0' 
-                                style='border-radius:20px;max-width:100%'
-                                title="MVNNOOO on Amazon Music">
-                            </iframe>
-                        </div>
-                        <div style="text-align: center; margin-top: 15px; color: var(--gray); font-size: 0.9rem;">
-                            <p>استمع إلى موسيقى MVNNOOO على منصة Amazon Music، أحد أكبر المنصات الموسيقية في العالم.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- تضمين Apple Music -->
-                <div class="collapsible-section" style="margin-top: 20px;">
-                    <div class="section-header" onclick="toggleSection('apple-music-section')">
-                        <h3 class="section-title">Apple Music</h3>
-                        <i class="fas fa-chevron-down section-icon" id="apple-music-section-icon"></i>
-                    </div>
-                    <div class="section-content active" id="apple-music-section">
-                        <div class="apple-music-container">
-                            <div class="apple-music-embed">
-                                <iframe
-                                    src="https://embed.music.apple.com/us/artist/mvnnooo/1856084660"
-                                    style="border-radius: 20px;"
-                                    allow="encrypted-media *; fullscreen *;"
-                                    title="MVNNOOO on Apple Music">
-                                </iframe>
-                            </div>
-                        </div>
-                        <div style="text-align: center; margin-top: 15px; color: var(--gray); font-size: 0.9rem;">
-                            <p>استمع إلى موسيقى MVNNOOO على منصة Apple Music، المنصة الموسيقية الرسمية من Apple.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- تضمين Anghami -->
-                <div class="collapsible-section" style="margin-top: 20px;">
-                    <div class="section-header" onclick="toggleSection('anghami-section')">
-                        <h3 class="section-title">Anghami</h3>
-                        <i class="fas fa-chevron-down section-icon" id="anghami-section-icon"></i>
-                    </div>
-                    <div class="section-content active" id="anghami-section">
-                        <div class="anghami-container">
-                            <iframe 
-                                src="https://widget.anghami.com/artist/26394054/?theme=fulldark&layout=wide&lang=en" 
-                                scrolling="no" 
-                                frameborder="0" 
-                                class="anghami-embed"
-                                title="MVNNOOO on Anghami">
-                            </iframe>
-                        </div>
-                        <div style="text-align: center; margin-top: 15px; color: var(--gray); font-size: 0.9rem;">
-                            <p>استمع إلى موسيقى MVNNOOO على منصة Anghami، المنصة الموسيقية الرائدة في العالم العربي.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- قسم التواصل -->
-                <div class="collapsible-section" style="margin-top: 20px;">
-                    <div class="section-header" onclick="toggleSection('contact')">
-                        <h3 class="section-title">التواصل والتعاون</h3>
-                        <i class="fas fa-chevron-down section-icon" id="contact-icon"></i>
-                    </div>
-                    <div class="section-content" id="contact">
-                        <div class="quick-platforms" style="grid-template-columns: repeat(2, 1fr); margin-top: 15px;">
-                            <a href="mailto:itsjrmano@gmail.com" class="platform-btn" aria-label="Email">
-                                <i class="fas fa-envelope platform-icon"></i>
-                                <span class="platform-name">البريد الإلكتروني</span>
-                            </a>
-                            <a href="https://www.instagram.com/mvnnoooo/" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Instagram">
-                                <i class="fab fa-instagram platform-icon instagram"></i>
-                                <span class="platform-name">Instagram</span>
-                            </a>
-                            <a href="https://www.facebook.com/mvnnoooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Facebook">
-                                <i class="fab fa-facebook-f platform-icon facebook"></i>
-                                <span class="platform-name">Facebook</span>
-                            </a>
-                            <a href="https://www.tiktok.com/@mvnnoooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="TikTok">
-                                <i class="fab fa-tiktok platform-icon tiktok"></i>
-                                <span class="platform-name">TikTok</span>
-                            </a>
-                        </div>
-                        
-                        <div style="margin-top: 20px; color: var(--gray); font-size: 0.9rem; text-align: center;">
-                            <p>للتعاون الفني، الحفلات، أو المقابلات الإعلامية:</p>
-                            <p style="margin-top: 10px;">
-                                <a href="mailto:itsjrmano@gmail.com" style="color: var(--primary); text-decoration: none;">
-                                    itsjrmano@gmail.com
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- قسم الروابط الاجتماعية -->
-                <div class="collapsible-section" style="margin-top: 20px;">
-                    <div class="section-header" onclick="toggleSection('social-media')">
-                        <h3 class="section-title">الروابط الاجتماعية</h3>
-                        <i class="fas fa-chevron-down section-icon" id="social-media-icon"></i>
-                    </div>
-                    <div class="section-content active" id="social-media">
-                        <!-- تضمين Facebook -->
-                        <div style="margin-bottom: 25px;">
-                            <div style="text-align: center; margin-bottom: 10px; color: var(--primary); font-weight: 600;">
-                                <i class="fab fa-facebook-f"></i> صفحة الفيسبوك الرسمية
-                            </div>
-                            <div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow);">
-                                <iframe 
-                                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmvnnoooo&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
-                                    width="100%" 
-                                    height="500" 
-                                    style="border:none;overflow:hidden;display:block;" 
-                                    scrolling="no" 
-                                    frameborder="0" 
-                                    allowfullscreen="true" 
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                    title="MVNNOOO Facebook Page">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <!-- تضمين Instagram -->
-                        <div style="margin-bottom: 25px;">
-                            <div style="text-align: center; margin-bottom: 10px; color: var(--primary); font-weight: 600;">
-                                <i class="fab fa-instagram"></i> حساب الإنستجرام الرسمي
-                            </div>
-                            <div style="background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45); padding: 20px; border-radius: var(--radius-sm); text-align: center;">
-                                <div style="background: var(--card); padding: 20px; border-radius: var(--radius-xs);">
-                                    <i class="fab fa-instagram" style="font-size: 2.5rem; margin-bottom: 10px; background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                                    <h3 style="color: var(--light); margin-bottom: 10px;">@mvnnoooo</h3>
-                                    <p style="color: var(--gray); margin-bottom: 20px;">تابع MVNNOOO على إنستجرام</p>
-                                    <a href="https://www.instagram.com/mvnnoooo/" target="_blank" style="display: inline-block; background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45); color: white; padding: 12px 25px; border-radius: var(--radius-xs); text-decoration: none; font-weight: 600;" rel="noopener noreferrer">
-                                        متابعة على إنستجرام
-                                    </a>
+                                <div class="stat-card">
+                                    <div class="stat-number">٢٠٢٠</div>
+                                    <div class="stat-label">سنة البدء</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">∞</div>
+                                    <div class="stat-label">طاقة إبداعية</div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- تضمين Threads -->
-                        <div style="margin-bottom: 25px;">
-                            <div style="text-align: center; margin-bottom: 10px; color: var(--primary); font-weight: 600;">
-                                <i class="fas fa-comment"></i> حساب Threads الرسمي
+                        
+                        <!-- المحتوى الإنجليزي -->
+                        <div class="lang-content english" id="epk-en">
+                            <div class="epk-content">
+                                <h3 style="color: var(--light); margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">About the Artist</h3>
+                                <p><strong>The Beginning:</strong> MVNNOOO was born in El Agamy, Alexandria in 1992. He grew up in the vibrant streets of Alexandria, where he was exposed to the raw energy of urban life, which later became a major influence on his music.</p>
+                                
+                                <p><strong>Musical Journey:</strong> MVNNOOO began his musical journey in 2020, crafting a distinctive style that blends Egyptian Trap, Drill, and electronic street sounds. His music is characterized by heavy rhythms, realistic storytelling, and street-inspired energy.</p>
+                                
+                                <p><strong>Musical Style:</strong></p>
+                                <ul class="epk-list">
+                                    <li>Egyptian Trap with international production quality</li>
+                                    <li>Drill mixed with street narratives</li>
+                                    <li>Electronic Street Sound</li>
+                                    <li>Dark Minimal aesthetics</li>
+                                    <li>Arab Hip Hop</li>
+                                </ul>
+                                
+                                <p><strong>Collaborations:</strong> MVNNOOO has collaborated with other artists including <strong>HARLY</strong>, and continues to push the boundaries of the Egyptian urban music scene.</p>
                             </div>
-                            <div style="background: #000; padding: 20px; border-radius: var(--radius-sm); text-align: center;">
-                                <div style="margin-bottom: 15px;">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                                        <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-                                    </svg>
+                            
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">20+</div>
+                                    <div class="stat-label">Released Songs</div>
                                 </div>
-                                <h3 style="color: #fff; margin: 10px 0;">@mvnnoooo على Threads</h3>
-                                <p style="color: #aaa; margin-bottom: 20px;">تابع MVNNOOO على Threads</p>
-                                <a href="https://www.threads.net/@mvnnoooo" target="_blank" style="display: inline-block; background: #fff; color: #000; padding: 12px 20px; border-radius: 999px; text-decoration: none; font-weight: bold;" rel="noopener noreferrer">
-                                    متابعة على Threads
-                                </a>
+                                <div class="stat-card">
+                                    <div class="stat-number">13+</div>
+                                    <div class="stat-label">Global Platforms</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">2020</div>
+                                    <div class="stat-label">Starting Year</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">∞</div>
+                                    <div class="stat-label">Creative Energy</div>
+                                </div>
                             </div>
                         </div>
                         
-                        <!-- YouTube Artist Embed -->
-                        <div>
-                            <div style="text-align: center; margin-bottom: 10px; color: var(--primary); font-weight: 600;">
-                                <i class="fab fa-youtube"></i> YouTube Official Channel - MVNNOOO
+                        <div class="epk-footer">
+                            <p>آخر تحديث / Last Updated: ديسمبر 2024 / December 2024</p>
+                            <p style="margin-top: 5px;">© 2024 MVNNOOO. جميع الحقوق محفوظة / All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget: Social Media -->
+                <div class="widget social-media-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-hashtag"></i>
+                            وسائل التواصل الاجتماعي
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="social-grid">
+                            <div class="social-card">
+                                <i class="fab fa-instagram social-icon" style="background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                                <div class="social-name">Instagram</div>
+                                <div class="social-followers">@mvnnoooo</div>
+                                <a href="https://www.instagram.com/mvnnoooo/" target="_blank" class="social-link" rel="noopener noreferrer">
+                                    متابعة
+                                </a>
                             </div>
-                            <div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow);">
-                                <iframe
-                                    style="border-radius:12px; width:100%; height:352px; border:none; overflow:hidden;"
-                                    srcdoc='
-                                    <html>
-                                    <head>
-                                    <style>
-                                        body { margin:0; font-family: Arial, sans-serif; background:#121212; color:#fff; }
-                                        .header { display:flex; gap:16px; align-items:center; padding:20px; }
-                                        .header img { width:88px; height:88px; border-radius:50%; object-fit:cover; border:2px solid #b0b0b0; }
-                                        .name-container { display:flex; flex-direction:column; }
-                                        .name-row { display:flex; align-items:center; gap:6px; font-size:22px; font-weight:bold; }
-                                        .badge { display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#b0b0b0; border-radius:50%; box-shadow:0 1px 3px rgba(0,0,0,0.3); margin-left:6px; }
-                                        .badge svg { width:12px; height:12px; fill:black; }
-                                        .bio { font-size:13px; color:#b3b3b3; margin-top:4px; }
-                                        a { text-decoration:none; color:inherit; }
-                                    </style>
-                                    </head>
-                                    <body>
-                                    <a href="https://www.youtube.com/@MVNNOOO" target="_blank">
-                                        <div class="header">
-                                        <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/595170565_122110266009121783_6960760768272518512_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Am9MJSeZfLcQ7kNvwHgLg4k&_nc_oc=AdnNdQWZiHGCORYq7BiSuBpzjIxM3BDuKj-o90ugvMehqUxQrp5D3aO03Pf4eGBviLk&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=6sRheVxqlVZK78pfIhk6Qg&oh=00_AfqIBoBjHPuMKMam5HBNaQCmtjc6p6-3pCBxLqA-cd_c4Q&oe=695CEB9F" alt="MVNNOOO"/>
-                                        <div class="name-container">
-                                            <div class="name-row">
-                                            MVNNOOO
-                                            <span class="badge">
-                                                <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
-                                            </span>
-                                            </div>
-                                            <div class="bio"> MVNNOOO Alexandria-born artist (El Agamy, 1992) shaping a new wave in Egyptian Trap, Drill & Electronic Street Sound. Since beginning his journey in 2020, MVNNOOO has crafted a raw, boundary-pushing style powered by street energy, heavy rhythms, and sharp storytelling. His sound continues to evolve through standout collaborations — including work with fellow artist HARLY — while reflecting the pulse and grit of Alexandria's underground. "Sound from the streets, vibes for the world."</div>
-                                        </div>
-                                        </div>
-                                    </a>
-                                    </body>
-                                    </html>'
-                                    frameborder="0"
-                                    allowfullscreen=""
-                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                                    loading="lazy"
-                                    title="MVNNOOO YouTube Channel">
-                                </iframe>
+                            <div class="social-card">
+                                <i class="fab fa-tiktok social-icon"></i>
+                                <div class="social-name">TikTok</div>
+                                <div class="social-followers">@mvnnoooo</div>
+                                <a href="https://www.tiktok.com/@mvnnoooo" target="_blank" class="social-link" rel="noopener noreferrer">
+                                    متابعة
+                                </a>
+                            </div>
+                            <div class="social-card">
+                                <i class="fab fa-youtube social-icon" style="color: #FF0000;"></i>
+                                <div class="social-name">YouTube</div>
+                                <div class="social-followers">@MVNNOOO</div>
+                                <a href="https://www.youtube.com/@MVNNOOO" target="_blank" class="social-link" rel="noopener noreferrer">
+                                    اشتراك
+                                </a>
+                            </div>
+                            <div class="social-card">
+                                <i class="fab fa-facebook-f social-icon" style="color: #1877F2;"></i>
+                                <div class="social-name">Facebook</div>
+                                <div class="social-followers">mvnnoooo</div>
+                                <a href="https://www.facebook.com/mvnnoooo" target="_blank" class="social-link" rel="noopener noreferrer">
+                                    متابعة
+                                </a>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Spotify Artist Embed -->
-                        <div>
-                            <div style="text-align: center; margin-bottom: 10px; color: var(--primary); font-weight: 600;">
-                                <i class="fab fa-spotify"></i> Spotify - MVNNOOO
+                <!-- Widget: Contact Info -->
+                <div class="widget contact-info-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-envelope"></i>
+                            معلومات الاتصال
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-label">البريد الإلكتروني</div>
+                                    <a href="mailto:itsjrmano@gmail.com" class="contact-value contact-link">itsjrmano@gmail.com</a>
+                                </div>
                             </div>
-                            <div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow);">
-                                <iframe 
-                                    data-testid="embed-iframe"
-                                    style="border-radius:12px" 
-                                    src="https://open.spotify.com/embed/artist/5OpjwqoP6EVF7DiEgxbw6N?utm_source=generator&theme=0" 
-                                    width="100%" 
-                                    height="352" 
-                                    frameborder="0" 
-                                    allowfullscreen="" 
-                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                                    loading="lazy"
-                                    title="MVNNOOO on Spotify">
-                                </iframe>
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Instagram</div>
+                                    <a href="https://instagram.com/mvnnoooo" target="_blank" class="contact-value contact-link" rel="noopener noreferrer">@mvnnoooo</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-label">للحجز والتعاون</div>
+                                    <div class="contact-value">itsjrmano@gmail.com</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1963,82 +1680,16 @@
 
         <!-- صفحة المزيد -->
         <section id="more" class="content-section">
-            <div class="hero-section">
-                <!-- جميع المنصات -->
-                <div class="collapsible-section">
-                    <div class="section-header" onclick="toggleSection('all-platforms')">
-                        <h3 class="section-title">جميع المنصات</h3>
-                        <i class="fas fa-chevron-down section-icon" id="all-platforms-icon"></i>
+            <div class="widget-system">
+                <!-- Widget: App Info -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-info-circle"></i>
+                            معلومات التطبيق
+                        </h3>
                     </div>
-                    <div class="section-content" id="all-platforms">
-                        <div class="quick-platforms" style="grid-template-columns: repeat(2, 1fr);">
-                            <a href="https://open.spotify.com/intl-ar/artist/5OpjwqoP6EVF7DiEgxbw6N" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Spotify">
-                                <i class="fab fa-spotify platform-icon spotify"></i>
-                                <span class="platform-name">Spotify</span>
-                            </a>
-                            <a href="https://music.apple.com/eg/artist/mvnnooo/1856084660?l=ar" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Apple Music">
-                                <i class="fab fa-apple platform-icon apple"></i>
-                                <span class="platform-name">Apple Music</span>
-                            </a>
-                            <a href="https://www.shazam.com/en-us/artist/mvnnooo/1856084660" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Shazam">
-                                <i class="fas fa-music platform-icon shazam"></i>
-                                <span class="platform-name">Shazam</span>
-                            </a>
-                            <a href="https://play.anghami.com/artist/26394054" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Anghami">
-                                <i class="fas fa-music platform-icon anghami"></i>
-                                <span class="platform-name">Anghami</span>
-                            </a>
-                            <a href="https://www.youtube.com/@MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="YouTube">
-                                <i class="fab fa-youtube platform-icon youtube"></i>
-                                <span class="platform-name">YouTube</span>
-                            </a>
-                            <a href="https://www.tiktok.com/@mvnnoooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="TikTok">
-                                <i class="fab fa-tiktok platform-icon tiktok"></i>
-                                <span class="platform-name">TikTok</span>
-                            </a>
-                            <a href="https://deezer.com/artist/358069852" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Deezer">
-                                <i class="fab fa-deezer platform-icon deezer"></i>
-                                <span class="platform-name">Deezer</span>
-                            </a>
-                            <a href="https://www.facebook.com/mvnnoooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Facebook">
-                                <i class="fab fa-facebook-f platform-icon facebook"></i>
-                                <span class="platform-name">Facebook</span>
-                            </a>
-                            <a href="https://www.instagram.com/mvnnoooo/" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Instagram">
-                                <i class="fab fa-instagram platform-icon instagram"></i>
-                                <span class="platform-name">Instagram</span>
-                            </a>
-                            <a href="https://www.last.fm/music/MVNNOOO" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Last.fm">
-                                <i class="fab fa-lastfm platform-icon"></i>
-                                <span class="platform-name">Last.fm</span>
-                            </a>
-                            <a href="https://genius.com/artists/Mvnnooo" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Genius">
-                                <i class="fas fa-brain platform-icon"></i>
-                                <span class="platform-name">Genius</span>
-                            </a>
-                            <a href="https://music.amazon.com/artists/B0G3QG2928/mvnnooo?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_x6JSx5EZyvWdihUWBnYM6a5Mt" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Amazon Music">
-                                <i class="fab fa-amazon platform-icon"></i>
-                                <span class="platform-name">Amazon Music</span>
-                            </a>
-                            <a href="https://tidal.com/artist/70289375" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Tidal">
-                                <i class="fas fa-wave-square platform-icon"></i>
-                                <span class="platform-name">Tidal</span>
-                            </a>
-                            <a href="https://www.boomplay.com/artists/120665505?from=search" target="_blank" class="platform-btn" rel="noopener noreferrer" aria-label="Boomplay">
-                                <i class="fas fa-play-circle platform-icon"></i>
-                                <span class="platform-name">Boomplay</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- معلومات التطبيق -->
-                <div class="collapsible-section" style="margin-top: 20px;">
-                    <div class="section-header" onclick="toggleSection('app-info')">
-                        <h3 class="section-title">معلومات التطبيق</h3>
-                        <i class="fas fa-chevron-down section-icon" id="app-info-icon"></i>
-                    </div>
-                    <div class="section-content" id="app-info">
+                    <div class="widget-content">
                         <div style="color: var(--gray); font-size: 0.9rem; line-height: 1.8;">
                             <p><strong>MVNNOOO - التطبيق الرسمي</strong></p>
                             <p>هذا التطبيق يوفر وصولاً سريعاً إلى جميع محتوى الفنان MVNNOOO على المنصات المختلفة، بما في ذلك الموسيقى، البودكاست، والمزيد.</p>
@@ -2094,9 +1745,6 @@
             // إدارة التنقل
             setupNavigation();
             
-            // إدارة الأقسام القابلة للطي
-            setupCollapsibleSections();
-            
             // إعداد زر المشاركة
             setupShareButton();
             
@@ -2106,12 +1754,6 @@
             // إعداد زر التثبيت
             setupInstallButton();
             
-            // إضافة تأثيرات اللمس
-            setupTouchEffects();
-            
-            // تحسين تضمين Anghami
-            enhanceAnghamiEmbed();
-            
             // بدء تحديث الوقت
             startTimeUpdate();
             
@@ -2120,6 +1762,9 @@
             
             // تهيئة لغة EPK
             initializeEPKLanguage();
+            
+            // إضافة تأثيرات hover للويدجت
+            setupWidgetHoverEffects();
         });
 
         // إدارة التنقل بين الصفحات
@@ -2146,38 +1791,21 @@
             });
         }
 
-        // إدارة الأقسام القابلة للطي
-        function setupCollapsibleSections() {
-            // فتح بعض الأقسام افتراضياً
-            const defaultOpenSections = [
-                'about-content', 
-                'amazon-music-section',
-                'apple-music-section',
-                'anghami-section',
-                'social-media'
-            ];
-            defaultOpenSections.forEach(sectionId => {
-                const section = document.getElementById(sectionId);
-                const icon = document.getElementById(sectionId + '-icon');
-                if (section && icon) {
-                    section.classList.add('active');
-                    icon.style.transform = 'rotate(180deg)';
-                }
-            });
-        }
-
-        function toggleSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            const icon = document.getElementById(sectionId + '-icon');
+        // إعداد تأثيرات hover للويدجت
+        function setupWidgetHoverEffects() {
+            const widgets = document.querySelectorAll('.widget');
             
-            if (section && icon) {
-                section.classList.toggle('active');
-                if (section.classList.contains('active')) {
-                    icon.style.transform = 'rotate(180deg)';
-                } else {
-                    icon.style.transform = 'rotate(0deg)';
-                }
-            }
+            widgets.forEach(widget => {
+                widget.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.4)';
+                });
+                
+                widget.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'var(--shadow)';
+                });
+            });
         }
 
         // تبديل لغة EPK
@@ -2294,41 +1922,6 @@
                 installBtn.style.display = 'none';
                 deferredPrompt = null;
             });
-        }
-
-        // إعداد تأثيرات اللمس
-        function setupTouchEffects() {
-            const touchElements = document.querySelectorAll('.track-item, .album-card, .stat-card, .platform-btn, .spotify-button, .contact-btn');
-            
-            touchElements.forEach(element => {
-                element.classList.add('touch-feedback');
-            });
-        }
-
-        // تحسين تضمين Anghami
-        function enhanceAnghamiEmbed() {
-            const anghamiIframe = document.querySelector('.anghami-embed');
-            if (anghamiIframe) {
-                // جعل الإطار متجاوبًا
-                anghamiIframe.style.width = '100%';
-                
-                // تحديث الارتفاع تلقائيًا
-                window.addEventListener('resize', function() {
-                    adjustAnghamiHeight();
-                });
-                
-                adjustAnghamiHeight();
-            }
-        }
-
-        function adjustAnghamiHeight() {
-            const anghamiIframe = document.querySelector('.anghami-embed');
-            if (anghamiIframe) {
-                const width = anghamiIframe.clientWidth;
-                // احتفاظ بنسبة الأبعاد (600:190)
-                const height = Math.max(160, (width * 190) / 600);
-                anghamiIframe.style.height = height + 'px';
-            }
         }
 
         // تحديث سنة حقوق الملكية تلقائياً
