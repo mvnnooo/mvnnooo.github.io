@@ -1,0 +1,160 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "MusicGroup",
+            "@id": "https://mvnnooo.github.io/#artist",
+            "name": "MVNNOOO (منو)",
+            "alternateName": ["منو", "Mvnnooo"],
+            "description": "فنان راب مصري من الإسكندرية متخصص في موسيقى التراب المصري (Egyptian Trap) والدريل (Drill). يعرف فنيًا باسم 'منو' وهو أحد رواد مشهد الراب المصري الحديث.",
+            "url": "https://mvnnooo.github.io/",
+            "logo": "https://a.top4top.io/p_3658wwpki1.png",
+            "image": "https://www2.0zz0.com/2025/12/24/10/193758201.jpg",
+            "genre": ["Egyptian Trap", "Egyptian Drill", "Arab Hip Hop", "Arabic Rap", "Middle Eastern Music"],
+            "sameAs": [
+                "https://open.spotify.com/artist/5OpjwqoP6EVF7DiEgxbw6N",
+                "https://music.apple.com/eg/artist/mvnnooo/1856084660",
+                "https://www.tiktok.com/@mvnnoooo",
+                "https://www.instagram.com/mvnnoooo/",
+                "https://www.youtube.com/@MVNNOOO",
+                "https://play.anghami.com/artist/26394054",
+                "https://www.shazam.com/en-us/artist/mvnnooo/1856084660",
+                "https://deezer.com/artist/358069852"
+            ],
+            "founder": {
+                "@type": "Person",
+                "name": "MVNNOOO (منو)"
+            },
+            "location": {
+                "@type": "Place",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "الإسكندرية",
+                    "addressRegion": "الإسكندرية",
+                    "addressCountry": "مصر",
+                    "streetAddress": "العجمي"
+                }
+            },
+            "founder": {
+                "@type": "Person",
+                "name": "MVNNOOO",
+                "birthDate": "1992",
+                "birthPlace": "الإسكندرية، مصر"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://mvnnooo.github.io/#person",
+            "name": "MVNNOOO (منو)",
+            "alternateName": ["منو", "Mvnnooo"],
+            "url": "https://mvnnooo.github.io/",
+            "image": "https://www2.0zz0.com/2025/12/24/10/193758201.jpg",
+            "jobTitle": "فنان راب، مغني، كاتب أغاني",
+            "worksFor": {
+                "@id": "https://mvnnooo.github.io/#artist"
+            },
+            "birthPlace": {
+                "@type": "Place",
+                "name": "الإسكندرية، مصر"
+            },
+            "nationality": "مصري",
+            "gender": "ذكر",
+            "description": "فنان راب مصري من الإسكندرية، يعرف باسم 'منو'. متخصص في موسيقى التراب المصري والدريل. بدأ مسيرته الموسيقية عام 2020.",
+            "knowsAbout": ["موسيقى الراب", "التراب المصري", "الدريل", "التوزيع الموسيقي", "كتابة الأغاني"],
+            "sameAs": [
+                "https://open.spotify.com/artist/5OpjwqoP6EVF7DiEgxbw6N",
+                "https://www.instagram.com/mvnnoooo/"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://mvnnooo.github.io/#website",
+            "url": "https://mvnnooo.github.io/",
+            "name": "MVNNOOO (منو) - الموقع الرسمي",
+            "description": "الموقع الرسمي للفنان المصري MVNNOOO (منو) - فنان الراب المصري من الإسكندرية",
+            "publisher": {
+                "@id": "https://mvnnooo.github.io/#artist"
+            },
+            "inLanguage": ["ar-EG", "en"],
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://mvnnooo.github.io/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "MusicAlbum",
+            "name": "بداية (startup)",
+            "byArtist": {
+                "@id": "https://mvnnooo.github.io/#artist"
+            },
+            "url": "https://www.youtube.com/watch?v=MkJL3wVTBWg",
+            "image": "https://img.youtube.com/vi/MkJL3wVTBWg/maxresdefault.jpg",
+            "datePublished": "2025",
+            "albumProductionType": "SingleRelease",
+            "genre": "Egyptian Trap",
+            "numTracks": 1,
+            "track": {
+                "@type": "MusicRecording",
+                "name": "بداية (startup)",
+                "duration": "PT3M00S",
+                "inAlbum": "بداية (startup)"
+            }
+        },
+        {
+            "@type": "MusicAlbum",
+            "name": "رفرش (refresh)",
+            "byArtist": {
+                "@id": "https://mvnnooo.github.io/#artist"
+            },
+            "url": "https://www.youtube.com/watch?v=wfGK1k5wvoE",
+            "image": "https://img.youtube.com/vi/wfGK1k5wvoE/maxresdefault.jpg",
+            "datePublished": "2025",
+            "albumProductionType": "SingleRelease",
+            "genre": "Egyptian Drill",
+            "numTracks": 1,
+            "track": {
+                "@type": "MusicRecording",
+                "name": "رفرش (refresh)",
+                "duration": "PT3M00S",
+                "inAlbum": "رفرش (refresh)"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://mvnnooo.github.io/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://mvnnooo.github.io/",
+                        "name": "الرئيسية"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://mvnnooo.github.io/#artist",
+                        "name": "MVNNOOO (منو)"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://mvnnooo.github.io/#organization",
+            "name": "MVNNOOO Music",
+            "url": "https://mvnnooo.github.io/",
+            "logo": "https://a.top4top.io/p_3658wwpki1.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+20-XXXXXXXXX",
+                "contactType": "customer service",
+                "email": "itsjrmano@gmail.com",
+                "availableLanguage": ["Arabic", "English"]
+            }
+        }
+    ]
+}
