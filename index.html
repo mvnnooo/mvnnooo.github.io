@@ -4,7 +4,7 @@
     <!-- تحسينات Meta الأساسية -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#1DB954">
+    <meta name="theme-color" content="#050607">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
@@ -200,21 +200,21 @@
         }
 
         :root {
-            --primary: #1DB954;
-            --primary-light: #2FE070;
-            --primary-dark: #14883F;
-            --dark: #0B0D0C;
+            --primary: #5EC8E8;
+            --primary-light: #A9E4F5;
+            --primary-dark: #2C7A9E;
+            --dark: #050607;
             --light: #FFFFFF;
-            --gray: #A6A6A6;
-            --dark-gray: #535353;
-            --card: #14171599;
-            --card-solid: #15181699;
+            --gray: #9AA3A6;
+            --dark-gray: #4A5052;
+            --card: #0D0F1099;
+            --card-solid: #0E1011;
             --sidebar: #000000;
-            --border-soft: rgba(255, 255, 255, 0.07);
-            --border-strong: rgba(255, 255, 255, 0.14);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-            --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.35);
-            --shadow-glow: 0 0 0 1px rgba(29, 185, 84, 0.15), 0 12px 32px rgba(29, 185, 84, 0.12);
+            --border-soft: rgba(255, 255, 255, 0.06);
+            --border-strong: rgba(200, 225, 235, 0.16);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.45);
+            --shadow-glow: 0 0 0 1px rgba(94, 200, 232, 0.18), 0 12px 32px rgba(94, 200, 232, 0.14);
             --radius: 20px;
             --radius-sm: 16px;
             --radius-xs: 10px;
@@ -232,11 +232,14 @@
         body {
             font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background:
-                radial-gradient(circle at 12% 8%, rgba(29, 185, 84, 0.16), transparent 40%),
-                radial-gradient(circle at 88% 18%, rgba(138, 43, 226, 0.12), transparent 42%),
-                radial-gradient(circle at 50% 100%, rgba(29, 185, 84, 0.08), transparent 45%),
-                var(--dark);
-            background-attachment: fixed;
+                radial-gradient(circle at 12% 6%, rgba(94, 200, 232, 0.12), transparent 42%),
+                radial-gradient(circle at 88% 14%, rgba(150, 180, 200, 0.07), transparent 46%),
+                linear-gradient(180deg, rgba(2, 3, 4, 0.92) 0%, rgba(3, 4, 5, 0.96) 35%, #030405 72%),
+                url('bg-hero.jpg');
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-position: center, center, center, center 8%;
+            background-size: cover, cover, cover, cover;
+            background-attachment: fixed, fixed, fixed, fixed;
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
@@ -290,7 +293,7 @@
             right: 0;
             left: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(29, 185, 84, 0.55), transparent);
+            background: linear-gradient(90deg, transparent, rgba(94, 200, 232, 0.55), transparent);
             opacity: 0.6;
         }
 
@@ -321,7 +324,7 @@
 
         .widget-title i {
             color: var(--primary);
-            filter: drop-shadow(0 0 8px rgba(29, 185, 84, 0.5));
+            filter: drop-shadow(0 0 8px rgba(94, 200, 232, 0.5));
         }
 
         .widget-actions {
@@ -344,8 +347,8 @@
         }
 
         .widget-action-btn:hover {
-            background: rgba(29, 185, 84, 0.14);
-            border-color: rgba(29, 185, 84, 0.35);
+            background: rgba(94, 200, 232, 0.14);
+            border-color: rgba(94, 200, 232, 0.35);
             color: var(--primary-light);
             transform: translateY(-1px);
         }
@@ -367,7 +370,7 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(circle at 50% 40%, rgba(29, 185, 84, 0.18), transparent 55%),
+                radial-gradient(circle at 50% 40%, rgba(94, 200, 232, 0.18), transparent 55%),
                 var(--dark);
             display: flex;
             flex-direction: column;
@@ -382,7 +385,7 @@
             height: 84px;
             margin-bottom: 22px;
             border-radius: 22px;
-            box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.25), 0 0 40px rgba(29, 185, 84, 0.35);
+            box-shadow: 0 0 0 3px rgba(94, 200, 232, 0.25), 0 0 40px rgba(94, 200, 232, 0.35);
             animation: pulse 1.5s infinite;
         }
 
@@ -443,8 +446,8 @@
         }
 
         .header-btn:active {
-            background: rgba(29, 185, 84, 0.18);
-            border-color: rgba(29, 185, 84, 0.4);
+            background: rgba(94, 200, 232, 0.18);
+            border-color: rgba(94, 200, 232, 0.4);
             transform: scale(0.94);
         }
 
@@ -470,7 +473,7 @@
             padding: 4px;
             background: var(--primary-gradient);
             margin: 0 auto 20px;
-            box-shadow: var(--shadow), 0 0 45px rgba(29, 185, 84, 0.28);
+            box-shadow: var(--shadow), 0 0 45px rgba(94, 200, 232, 0.28);
             position: relative;
         }
 
@@ -558,8 +561,8 @@
         }
 
         .action-btn:hover {
-            background: rgba(29, 185, 84, 0.16);
-            border-color: rgba(29, 185, 84, 0.4);
+            background: rgba(94, 200, 232, 0.16);
+            border-color: rgba(94, 200, 232, 0.4);
             color: var(--primary-light);
             transform: translateY(-3px);
         }
@@ -838,8 +841,8 @@
         }
 
         .stat-card:hover {
-            background: rgba(29, 185, 84, 0.1);
-            border-color: rgba(29, 185, 84, 0.3);
+            background: rgba(94, 200, 232, 0.1);
+            border-color: rgba(94, 200, 232, 0.3);
             transform: translateY(-2px);
         }
 
@@ -882,7 +885,7 @@
             background: var(--primary-gradient);
             border-color: transparent;
             color: white;
-            box-shadow: 0 4px 14px rgba(29, 185, 84, 0.35);
+            box-shadow: 0 4px 14px rgba(94, 200, 232, 0.35);
         }
 
         .lang-content {
@@ -945,8 +948,8 @@
         }
 
         .contact-btn:hover {
-            background: rgba(29, 185, 84, 0.14);
-            border-color: rgba(29, 185, 84, 0.35);
+            background: rgba(94, 200, 232, 0.14);
+            border-color: rgba(94, 200, 232, 0.35);
             transform: translateY(-2px);
         }
 
@@ -1015,12 +1018,12 @@
             align-items: center;
             gap: 10px;
             transition: var(--transition);
-            box-shadow: 0 8px 20px rgba(29, 185, 84, 0.35);
+            box-shadow: 0 8px 20px rgba(94, 200, 232, 0.35);
         }
 
         .spotify-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 26px rgba(29, 185, 84, 0.45);
+            box-shadow: 0 12px 26px rgba(94, 200, 232, 0.45);
         }
 
         /* Widget: Social Media */
@@ -1077,7 +1080,7 @@
         }
 
         .social-link:hover {
-            box-shadow: 0 6px 16px rgba(29, 185, 84, 0.4);
+            box-shadow: 0 6px 16px rgba(94, 200, 232, 0.4);
             transform: translateY(-1px);
         }
 
@@ -1123,7 +1126,7 @@
             justify-content: center;
             color: white;
             font-size: 1.2rem;
-            box-shadow: 0 4px 12px rgba(29, 185, 84, 0.35);
+            box-shadow: 0 4px 12px rgba(94, 200, 232, 0.35);
         }
 
         .contact-details {
@@ -1199,7 +1202,7 @@
             height: 3px;
             border-radius: 3px;
             background: var(--primary-gradient);
-            box-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
+            box-shadow: 0 0 10px rgba(94, 200, 232, 0.6);
         }
 
         .nav-icon {
@@ -1227,7 +1230,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            box-shadow: 0 10px 26px rgba(29, 185, 84, 0.45);
+            box-shadow: 0 10px 26px rgba(94, 200, 232, 0.45);
             z-index: 999;
             animation: float 3s ease-in-out infinite;
             transition: var(--transition);
